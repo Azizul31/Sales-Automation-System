@@ -1,9 +1,11 @@
 Developed by:Ashikur Rahman(CUET,CSE'14),Azizul Hakim Chowdhury(CUET,CSE'14),Amit Paul(CUET,CSE'14)
 
-i.)Theme & Templete Credit(1): NewBiz
-Theme & Templete URL: https://bootstrapmade.com/newbiz-bootstrap-business-template/
-Theme & Templete Author: BootstrapMade.com
-Theme Templete's URL: https://bootstrapmade.com
+i.)Thanks for downloading this theme!
+
+Theme Name: NewBiz
+Theme URL: https://bootstrapmade.com/newbiz-bootstrap-business-template/
+Author: BootstrapMade.com
+Author URL: https://bootstrapmade.com
 
 ii.)Theme & Templete Credit(2):
 # [Start Bootstrap - SB Admin 2](https://startbootstrap.com/template-overviews/sb-admin-2/)
