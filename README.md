@@ -1,7 +1,7 @@
 Developed by:Ashikur Rahman(CUET,CSE'14),Azizul Hakim Chowdhury(CUET,CSE'14),Amit Paul(CUET,CSE'14)
 
-i.)Thanks for downloading this theme!
-
+i.)Theme & Templete Credit(1):
+Thanks for downloading this theme!
 Theme Name: NewBiz
 Theme URL: https://bootstrapmade.com/newbiz-bootstrap-business-template/
 Author: BootstrapMade.com
