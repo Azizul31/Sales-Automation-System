@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 29, 2019 at 10:59 PM
+-- Generation Time: Mar 29, 2019 at 11:19 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -92,30 +92,30 @@ CREATE TABLE `markets` (
 --
 
 INSERT INTO `markets` (`Market Name`, `Market ID`, `Area Code`) VALUES
-('Reazuddin Bazar', 'CTGREAZ', 'CTG_1'),
-('Kotowali', 'CTGKOT', 'CTG_1'),
-('Sitakunda Bazar', 'SITABAZ', 'CTG_2'),
-('Sitakunda Main Road', 'SITAMAIN', 'CTG_2'),
-('Hathazari Bazar', 'HATBAZ', 'CTG_3'),
-('Hathazari Main Road', 'HATMAIN', 'CTG_3'),
-('Feni Bazar', 'FENIBAZ', 'FENI_1'),
-('Feni Main Road', 'FENIMAIN', 'FENI_1'),
-('Fulgazi Bazar', 'FULBAZ', 'FENI_2'),
-('Fulgazi Main Road', 'FULMAIN', 'FENI_2'),
-('Sonagazi Bazar', 'SONBAZ', 'FENI_3'),
-('Sonagazi Main Road', 'SONMAIN', 'FENI_3'),
 ('Banani 1', 'BAN1', 'DHK_1'),
 ('Banani 2', 'BAN2', 'DHK_1'),
 ('Dhanmondi 1', 'DHN1', 'DHK_2'),
 ('Dhanmondi 2', 'DHN2', 'DHK_2'),
-('Uttara 1', 'UTT1', 'DHK_3'),
-('Uttara 2', 'UTT2', 'DHK_3'),
+('Feni Bazar', 'FENIBAZ', 'FENI_1'),
+('Feni Main Road', 'FENIMAIN', 'FENI_1'),
+('Fulgazi Bazar', 'FULBAZ', 'FENI_2'),
+('Fulgazi Main Road', 'FULMAIN', 'FENI_2'),
 ('Gazipur Bazar', 'GPBAZ', 'GP_1'),
 ('Gazipur Main Road', 'GPMAIN', 'GP_1'),
+('Hathazari Bazar', 'HATBAZ', 'CTG_3'),
+('Hathazari Main Road', 'HATMAIN', 'CTG_3'),
 ('Kapasia Bazar', 'KAPBAZ', 'GP_2'),
 ('Kapasia Main Road', 'KAPMAIN', 'GP_2'),
+('Kotowali', 'CTGKOT', 'CTG_1'),
+('Reazuddin Bazar', 'CTGREAZ', 'CTG_1'),
+('Sitakunda Bazar', 'SITABAZ', 'CTG_2'),
+('Sitakunda Main Road', 'SITAMAIN', 'CTG_2'),
+('Sonagazi Bazar', 'SONBAZ', 'FENI_3'),
+('Sonagazi Main Road', 'SONMAIN', 'FENI_3'),
 ('Sreepur Bazar', 'SREBAZ', 'GP_3'),
-('Sreepur Main Road', 'SREMAIN', 'GP_3');
+('Sreepur Main Road', 'SREMAIN', 'GP_3'),
+('Uttara 1', 'UTT1', 'DHK_3'),
+('Uttara 2', 'UTT2', 'DHK_3');
 
 -- --------------------------------------------------------
 
@@ -233,6 +233,7 @@ CREATE TABLE `shops` (
   `Name` varchar(40) NOT NULL,
   `Shop ID` varchar(15) NOT NULL,
   `Market` varchar(30) NOT NULL,
+  `Market ID` varchar(15) NOT NULL,
   `Area Code` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -240,43 +241,43 @@ CREATE TABLE `shops` (
 -- Dumping data for table `shops`
 --
 
-INSERT INTO `shops` (`Name`, `Shop ID`, `Market`, `Area Code`) VALUES
-('Store 19', 'BAN1_1', 'Banani 1', 'DHK_1'),
-('Store 20', 'BAN1_2', 'Banani 1', 'DHK_1'),
-('Store 21', 'BAN2_1', 'Banani 2', 'DHK_1'),
-('Store 3', 'CTGKOT_1', 'Kotowali', 'CTG_1'),
-('Store 1', 'CTGREAZ_1', 'Reazuddin Bazar', 'CTG_1'),
-('Store 2', 'CTGREAZ_2', 'Reazuddin Bazar', 'CTG_1'),
-('Store 22', 'DHN1_1', 'Dhanmondi 1', 'DHK_2'),
-('Store 23', 'DHN1_2', 'Dhanmondi 1', 'DHK_2'),
-('Store 24', 'DHN2_1', 'Dhanmondi 2', 'DHK_2'),
-('Store 10', 'FENIBAZ_1', 'Feni Bazar', 'FENI_1'),
-('Store 11', 'FENIBAZ_2', 'Feni Bazar', 'FENI_1'),
-('Store 12', 'FENIMAIN_3', 'Feni Main Road', 'FENI_1'),
-('Store 13', 'FULBAZ_1', 'Fulgazi Bazar', 'FENI_2'),
-('Store 14', 'FULBAZ_2', 'Fulgazi Bazar', 'FENI_2'),
-('Store 15', 'FULMAIN_1', 'Fulgazi Main Road', 'FENI_2'),
-('Store 28', 'GPBAZ_1', 'Gazipur Bazar', 'GP_1'),
-('Store 29', 'GPBAZ_2', 'Gazipur Bazar', 'GP_1'),
-('Store 30', 'GPMAIN_1', 'Gazipur Main Road', 'GP_1'),
-('Store 7', 'HATBAZ_1', 'Hathazari Bazar', 'CTG_3'),
-('Store 8', 'HATBAZ_2', 'Hathazari Bazar', 'CTG_3'),
-('Store 9', 'HATMAIN_1', 'Hathazari Main Road', 'CTG_3'),
-('Store 31', 'KAPBAZ_1', 'Kapasia Bazar', 'GP_2'),
-('Store 32', 'KAPBAZ_2', 'Kapasia Bazar', 'GP_2'),
-('Store 33', 'KAPMAIN_1', 'Kapasia Main Road', 'GP_2'),
-('Store 4', 'SITABAZ_1', 'Sitakunda Bazar', 'CTG_2'),
-('Store 5', 'SITABAZ_2', 'Sitakunda Bazar', 'CTG_2'),
-('Store 6', 'SITAMAIN_3', 'Sitakunda Main Road', 'CTG_2'),
-('Store 16', 'SONBAZ_1', 'Sonagazi Bazar', 'FENI_3'),
-('Store 17', 'SONBAZ_2', 'Sonagazi Bazar', 'FENI_3'),
-('Store 18', 'SONMAIN_1', 'Sonagazi Main Road', 'FENI_3'),
-('Store 34', 'SREBAZ_1', 'Sreepur Bazar', 'GP_3'),
-('Store 35', 'SREBAZ_2', 'Sreepur Bazar', 'GP_3'),
-('Store 36', 'SREMAIN_1', 'Sreepur Main Road', 'GP_3'),
-('Store 25', 'UTT1_1', 'Uttara 1', 'DHK_3'),
-('Store 26', 'UTT1_2', 'Uttara 1', 'DHK_3'),
-('Store 27', 'UTT2_1', 'Uttara 2', 'DHK_3');
+INSERT INTO `shops` (`Name`, `Shop ID`, `Market`, `Market ID`, `Area Code`) VALUES
+('Store 19', 'BAN1_1', 'Banani 1', 'BAN1', 'DHK_1'),
+('Store 20', 'BAN1_2', 'Banani 1', 'BAN1', 'DHK_1'),
+('Store 21', 'BAN2_1', 'Banani 2', 'BAN2', 'DHK_1'),
+('Store 3', 'CTGKOT_1', 'Kotowali', 'CTGKOT', 'CTG_1'),
+('Store 1', 'CTGREAZ_1', 'Reazuddin Bazar', 'CTGREAZ', 'CTG_1'),
+('Store 2', 'CTGREAZ_2', 'Reazuddin Bazar', 'CTGREAZ', 'CTG_1'),
+('Store 22', 'DHN1_1', 'Dhanmondi 1', 'DHN1', 'DHK_2'),
+('Store 23', 'DHN1_2', 'Dhanmondi 1', 'DHN1', 'DHK_2'),
+('Store 24', 'DHN2_1', 'Dhanmondi 2', 'DHN2', 'DHK_2'),
+('Store 10', 'FENIBAZ_1', 'Feni Bazar', 'FENIBAZ', 'FENI_1'),
+('Store 11', 'FENIBAZ_2', 'Feni Bazar', 'FENIBAZ', 'FENI_1'),
+('Store 12', 'FENIMAIN_3', 'Feni Main Road', 'FENIMAIN', 'FENI_1'),
+('Store 13', 'FULBAZ_1', 'Fulgazi Bazar', 'FULBAZ', 'FENI_2'),
+('Store 14', 'FULBAZ_2', 'Fulgazi Bazar', 'FULBAZ', 'FENI_2'),
+('Store 15', 'FULMAIN_1', 'Fulgazi Main Road', 'FULMAIN', 'FENI_2'),
+('Store 28', 'GPBAZ_1', 'Gazipur Bazar', 'GPBAZ', 'GP_1'),
+('Store 29', 'GPBAZ_2', 'Gazipur Bazar', 'GPBAZ', 'GP_1'),
+('Store 30', 'GPMAIN_1', 'Gazipur Main Road', 'GPMAIN', 'GP_1'),
+('Store 7', 'HATBAZ_1', 'Hathazari Bazar', 'HATBAZ', 'CTG_3'),
+('Store 8', 'HATBAZ_2', 'Hathazari Bazar', 'HATBAZ', 'CTG_3'),
+('Store 9', 'HATMAIN_1', 'Hathazari Main Road', 'HATMAIN', 'CTG_3'),
+('Store 31', 'KAPBAZ_1', 'Kapasia Bazar', 'KAPBAZ', 'GP_2'),
+('Store 32', 'KAPBAZ_2', 'Kapasia Bazar', 'KAPBAZ', 'GP_2'),
+('Store 33', 'KAPMAIN_1', 'Kapasia Main Road', 'KAPMAIN', 'GP_2'),
+('Store 4', 'SITABAZ_1', 'Sitakunda Bazar', 'SITABAZ', 'CTG_2'),
+('Store 5', 'SITABAZ_2', 'Sitakunda Bazar', 'SITABAZ', 'CTG_2'),
+('Store 6', 'SITAMAIN_3', 'Sitakunda Main Road', 'SITAMAIN', 'CTG_2'),
+('Store 16', 'SONBAZ_1', 'Sonagazi Bazar', 'SONBAZ', 'FENI_3'),
+('Store 17', 'SONBAZ_2', 'Sonagazi Bazar', 'SONBAZ', 'FENI_3'),
+('Store 18', 'SONMAIN_1', 'Sonagazi Main Road', 'SONMAIN', 'FENI_3'),
+('Store 34', 'SREBAZ_1', 'Sreepur Bazar', 'SREBAZ', 'GP_3'),
+('Store 35', 'SREBAZ_2', 'Sreepur Bazar', 'SREBAZ', 'GP_3'),
+('Store 36', 'SREMAIN_1', 'Sreepur Main Road', 'SREMAIN', 'GP_3'),
+('Store 25', 'UTT1_1', 'Uttara 1', 'UTT1', 'DHK_3'),
+('Store 26', 'UTT1_2', 'Uttara 1', 'UTT1', 'DHK_3'),
+('Store 27', 'UTT2_1', 'Uttara 2', 'UTT2', 'DHK_3');
 
 -- --------------------------------------------------------
 
@@ -316,6 +317,12 @@ ALTER TABLE `distributors_areas`
 --
 ALTER TABLE `executives`
   ADD PRIMARY KEY (`Name`);
+
+--
+-- Indexes for table `markets`
+--
+ALTER TABLE `markets`
+  ADD PRIMARY KEY (`Market Name`);
 
 --
 -- Indexes for table `regional managers`
