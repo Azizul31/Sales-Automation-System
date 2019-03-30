@@ -1,5 +1,10 @@
 <?php
+ob_start();
+include 'core.inc.php';
 include("head.php");
+
+echo $_SESSION['user_id'];
+if (!loggedin()) header("location: index.php");
 ?>
 <title>Dataentry Form</title>
 <style>
@@ -8,15 +13,12 @@ include("head.php");
   width: 25%;
   margin-top: 6px;
   font-weight: 600;
-
- 
 }
 
 .col-75 {
   float: left;
   width: 75%;
   margin-top: 6px;
-
 }
 
 /* Clear floats after the columns */
@@ -24,23 +26,16 @@ include("head.php");
   content: "";
   display: table;
   clear: both;
-float: left;
- display: inline-block;
 }
 
-h1.spacing
-    {
-        text-align: center;
-        padding-bottom: 10px;
-    }
 
 </style>
 <div class="limiter">
 
 		<div class="container-login100">
 				<form class="login100-form validate-form" action= "" method="POST">
-					<span>
-                    <h1 class="spacing">Sales Entry</h1>   <br>
+					<span class="login100-form-title">
+                    <h1>Sales Entry</h1>   <br>
 					</span>
 <div class="row">
       <div class="col-25">
@@ -166,6 +161,3 @@ h1.spacing
 
 include("foot.php");
 ?>
-
-
-
