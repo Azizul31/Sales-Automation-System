@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 28, 2019 at 03:10 PM
+-- Generation Time: Mar 29, 2019 at 11:19 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -25,19 +25,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `areas`
---
-
-CREATE TABLE `areas` (
-  `Area Code` varchar(15) NOT NULL,
-  `Thana` varchar(20) NOT NULL,
-  `District` varchar(20) NOT NULL,
-  `Division` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `distributors_areas`
 --
 
@@ -50,6 +37,24 @@ CREATE TABLE `distributors_areas` (
   `Territory_Manager` varchar(30) NOT NULL COMMENT 'Territory manager in charge',
   `Regional_Manager` varchar(30) NOT NULL COMMENT 'Regional manager in charge'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `distributors_areas`
+--
+
+INSERT INTO `distributors_areas` (`Distributor_Name`, `Area Code`, `Distributor_ID`, `District`, `Division`, `Territory_Manager`, `Regional_Manager`) VALUES
+('Riyad Salehin', 'CTG_1', 'CTGD_1', 'Chattagram', 'Chattagram', 'Iqbal Hafiz', 'Yamin Iqbal'),
+('Rahad Islam', 'CTG_2', 'CTGD_2', 'Chattagram', 'Chattagram', 'Iqbal Hafiz', 'Yamin Iqbal'),
+('Irfanul Hasan', 'CTG_3', 'CTGD_3', 'Chattagram', 'Chattagram', 'Iqbal Hafiz', 'Yamin Iqbal'),
+('Ehsanul Haque', 'DHK_1', 'DHKD_1', 'Dhaka', 'Dhaka', 'Sumnoon Ahmad', 'Aman Ullah'),
+('Sakibur Rahman', 'DHK_2', 'DHKD_2', 'Dhaka', 'Dhaka', 'Sumnoon Ahmad', 'Aman Ullah'),
+('Zahid Hassan', 'DHK_3', 'DHKD_3', 'Dhaka', 'Dhaka', 'Sumnoon Ahmad', 'Aman Ullah'),
+('Rezwan Haque', 'FENI_1', 'FENID_1', 'Feni', 'Chattagram', 'Durjoy Chowdhury', 'Yamin Iqbal'),
+('Mohsem Tuhin', 'FENI_2', 'FENID_2', 'Feni', 'Chattagram', 'Durjoy Chowdhury', 'Yamin Iqbal'),
+('Mahmudul Hasan', 'FENI_3', 'FENID_3', 'Feni', 'Chattagram', 'Durjoy Chowdhury', 'Yamin Iqbal'),
+('Fazle Rahat', 'GP_1', 'GPD_1', 'Gazipur', 'Dhaka', 'Raju Ahmed', 'Aman Ullah'),
+('Sajid Rahman', 'GP_2', 'GPD_2', 'Gazipur', 'Dhaka', 'Raju Ahmed', 'Aman Ullah'),
+('Akash Bhowmik', 'GP_3', 'GPD_3', 'Gazipur', 'Dhaka', 'Raju Ahmed', 'Aman Ullah');
 
 -- --------------------------------------------------------
 
@@ -69,6 +74,48 @@ CREATE TABLE `executives` (
 
 INSERT INTO `executives` (`Name`, `ID`, `Password`) VALUES
 ('Abdul Halim', 'EX_01', 'e80a0702d314d055d05af996fe60cff9');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `markets`
+--
+
+CREATE TABLE `markets` (
+  `Market Name` varchar(30) NOT NULL,
+  `Market ID` varchar(15) NOT NULL,
+  `Area Code` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `markets`
+--
+
+INSERT INTO `markets` (`Market Name`, `Market ID`, `Area Code`) VALUES
+('Banani 1', 'BAN1', 'DHK_1'),
+('Banani 2', 'BAN2', 'DHK_1'),
+('Dhanmondi 1', 'DHN1', 'DHK_2'),
+('Dhanmondi 2', 'DHN2', 'DHK_2'),
+('Feni Bazar', 'FENIBAZ', 'FENI_1'),
+('Feni Main Road', 'FENIMAIN', 'FENI_1'),
+('Fulgazi Bazar', 'FULBAZ', 'FENI_2'),
+('Fulgazi Main Road', 'FULMAIN', 'FENI_2'),
+('Gazipur Bazar', 'GPBAZ', 'GP_1'),
+('Gazipur Main Road', 'GPMAIN', 'GP_1'),
+('Hathazari Bazar', 'HATBAZ', 'CTG_3'),
+('Hathazari Main Road', 'HATMAIN', 'CTG_3'),
+('Kapasia Bazar', 'KAPBAZ', 'GP_2'),
+('Kapasia Main Road', 'KAPMAIN', 'GP_2'),
+('Kotowali', 'CTGKOT', 'CTG_1'),
+('Reazuddin Bazar', 'CTGREAZ', 'CTG_1'),
+('Sitakunda Bazar', 'SITABAZ', 'CTG_2'),
+('Sitakunda Main Road', 'SITAMAIN', 'CTG_2'),
+('Sonagazi Bazar', 'SONBAZ', 'FENI_3'),
+('Sonagazi Main Road', 'SONMAIN', 'FENI_3'),
+('Sreepur Bazar', 'SREBAZ', 'GP_3'),
+('Sreepur Main Road', 'SREMAIN', 'GP_3'),
+('Uttara 1', 'UTT1', 'DHK_3'),
+('Uttara 2', 'UTT2', 'DHK_3');
 
 -- --------------------------------------------------------
 
@@ -155,8 +202,26 @@ CREATE TABLE `salesmen_tour_programme` (
   `Date` varchar(2) NOT NULL,
   `Month` varchar(2) NOT NULL,
   `Day` varchar(10) NOT NULL,
-  `Market ID` varchar(15) NOT NULL
+  `Market ID` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `salesmen_tour_programme`
+--
+
+INSERT INTO `salesmen_tour_programme` (`Salesman ID`, `Date`, `Month`, `Day`, `Market ID`) VALUES
+('SM_001', '2', '3', '2019', 'CTGREAZ'),
+('SM_002', '2', '3', '2019', 'SITABAZ'),
+('SM_003', '2', '3', '2019', 'HATBAZ'),
+('SM_004', '2', '3', '2019', 'FENIBAZ'),
+('SM_005', '2', '3', '2019', 'FULMAIN'),
+('SM_006', '2', '3', '2019', 'SONMAIN'),
+('SM_007', '2', '3', '2019', 'BAN1'),
+('SM_008', '2', '3', '2019', 'DHN1'),
+('SM_009', '2', '3', '2019', 'UTT1'),
+('SM_010', '2', '3', '2019', 'GPBAZ'),
+('SM_011', '2', '3', '2019', 'KAPMAIN'),
+('SM_012', '2', '3', '2019', 'SREBAZ');
 
 -- --------------------------------------------------------
 
@@ -168,8 +233,51 @@ CREATE TABLE `shops` (
   `Name` varchar(40) NOT NULL,
   `Shop ID` varchar(15) NOT NULL,
   `Market` varchar(30) NOT NULL,
+  `Market ID` varchar(15) NOT NULL,
   `Area Code` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `shops`
+--
+
+INSERT INTO `shops` (`Name`, `Shop ID`, `Market`, `Market ID`, `Area Code`) VALUES
+('Store 19', 'BAN1_1', 'Banani 1', 'BAN1', 'DHK_1'),
+('Store 20', 'BAN1_2', 'Banani 1', 'BAN1', 'DHK_1'),
+('Store 21', 'BAN2_1', 'Banani 2', 'BAN2', 'DHK_1'),
+('Store 3', 'CTGKOT_1', 'Kotowali', 'CTGKOT', 'CTG_1'),
+('Store 1', 'CTGREAZ_1', 'Reazuddin Bazar', 'CTGREAZ', 'CTG_1'),
+('Store 2', 'CTGREAZ_2', 'Reazuddin Bazar', 'CTGREAZ', 'CTG_1'),
+('Store 22', 'DHN1_1', 'Dhanmondi 1', 'DHN1', 'DHK_2'),
+('Store 23', 'DHN1_2', 'Dhanmondi 1', 'DHN1', 'DHK_2'),
+('Store 24', 'DHN2_1', 'Dhanmondi 2', 'DHN2', 'DHK_2'),
+('Store 10', 'FENIBAZ_1', 'Feni Bazar', 'FENIBAZ', 'FENI_1'),
+('Store 11', 'FENIBAZ_2', 'Feni Bazar', 'FENIBAZ', 'FENI_1'),
+('Store 12', 'FENIMAIN_3', 'Feni Main Road', 'FENIMAIN', 'FENI_1'),
+('Store 13', 'FULBAZ_1', 'Fulgazi Bazar', 'FULBAZ', 'FENI_2'),
+('Store 14', 'FULBAZ_2', 'Fulgazi Bazar', 'FULBAZ', 'FENI_2'),
+('Store 15', 'FULMAIN_1', 'Fulgazi Main Road', 'FULMAIN', 'FENI_2'),
+('Store 28', 'GPBAZ_1', 'Gazipur Bazar', 'GPBAZ', 'GP_1'),
+('Store 29', 'GPBAZ_2', 'Gazipur Bazar', 'GPBAZ', 'GP_1'),
+('Store 30', 'GPMAIN_1', 'Gazipur Main Road', 'GPMAIN', 'GP_1'),
+('Store 7', 'HATBAZ_1', 'Hathazari Bazar', 'HATBAZ', 'CTG_3'),
+('Store 8', 'HATBAZ_2', 'Hathazari Bazar', 'HATBAZ', 'CTG_3'),
+('Store 9', 'HATMAIN_1', 'Hathazari Main Road', 'HATMAIN', 'CTG_3'),
+('Store 31', 'KAPBAZ_1', 'Kapasia Bazar', 'KAPBAZ', 'GP_2'),
+('Store 32', 'KAPBAZ_2', 'Kapasia Bazar', 'KAPBAZ', 'GP_2'),
+('Store 33', 'KAPMAIN_1', 'Kapasia Main Road', 'KAPMAIN', 'GP_2'),
+('Store 4', 'SITABAZ_1', 'Sitakunda Bazar', 'SITABAZ', 'CTG_2'),
+('Store 5', 'SITABAZ_2', 'Sitakunda Bazar', 'SITABAZ', 'CTG_2'),
+('Store 6', 'SITAMAIN_3', 'Sitakunda Main Road', 'SITAMAIN', 'CTG_2'),
+('Store 16', 'SONBAZ_1', 'Sonagazi Bazar', 'SONBAZ', 'FENI_3'),
+('Store 17', 'SONBAZ_2', 'Sonagazi Bazar', 'SONBAZ', 'FENI_3'),
+('Store 18', 'SONMAIN_1', 'Sonagazi Main Road', 'SONMAIN', 'FENI_3'),
+('Store 34', 'SREBAZ_1', 'Sreepur Bazar', 'SREBAZ', 'GP_3'),
+('Store 35', 'SREBAZ_2', 'Sreepur Bazar', 'SREBAZ', 'GP_3'),
+('Store 36', 'SREMAIN_1', 'Sreepur Main Road', 'SREMAIN', 'GP_3'),
+('Store 25', 'UTT1_1', 'Uttara 1', 'UTT1', 'DHK_3'),
+('Store 26', 'UTT1_2', 'Uttara 1', 'UTT1', 'DHK_3'),
+('Store 27', 'UTT2_1', 'Uttara 2', 'UTT2', 'DHK_3');
 
 -- --------------------------------------------------------
 
@@ -199,10 +307,22 @@ INSERT INTO `territory managers` (`Name`, `ID`, `Password`, `District`) VALUES
 --
 
 --
+-- Indexes for table `distributors_areas`
+--
+ALTER TABLE `distributors_areas`
+  ADD PRIMARY KEY (`Distributor_ID`);
+
+--
 -- Indexes for table `executives`
 --
 ALTER TABLE `executives`
   ADD PRIMARY KEY (`Name`);
+
+--
+-- Indexes for table `markets`
+--
+ALTER TABLE `markets`
+  ADD PRIMARY KEY (`Market Name`);
 
 --
 -- Indexes for table `regional managers`
@@ -211,10 +331,28 @@ ALTER TABLE `regional managers`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexes for table `sales details`
+--
+ALTER TABLE `sales details`
+  ADD PRIMARY KEY (`Bill no.`);
+
+--
 -- Indexes for table `salesmen`
 --
 ALTER TABLE `salesmen`
   ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `salesmen_tour_programme`
+--
+ALTER TABLE `salesmen_tour_programme`
+  ADD PRIMARY KEY (`Salesman ID`);
+
+--
+-- Indexes for table `shops`
+--
+ALTER TABLE `shops`
+  ADD PRIMARY KEY (`Shop ID`);
 
 --
 -- Indexes for table `territory managers`
