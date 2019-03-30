@@ -7,6 +7,7 @@ include("head.php");
   float: left;
   width: 25%;
   margin-top: 6px;
+  font-weight: 600;
 }
 
 .col-75 {
@@ -38,24 +39,27 @@ include("head.php");
       <div class="col-75">
         <input type="text" id="fname" name="firstname" placeholder="Shop id..">
       </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="country">Item Entry:</label>
+     <div class="col-25">
+        <label for="fname">Item 1 quantity:</label>
       </div>
       <div class="col-75">
-        <select id="country" name="country">
-          <option value="australia">Item 1</option>
-          <option value="canada">Item 2</option>
-          <option value="usa">Item 3</option>                
-                                  
-        </select>
+        <input type="text" id="fname" name="firstname" value="0">
       </div>
-    </div>
+<div class="col-25">
+        <label for="fname">Item 2 quantity:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" value="0">
+      </div>
+<div class="col-25">
+        <label for="fname">Item 3 quantity:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" value="0">
+      </div>
 
-    <div class="row">
       <div class="col-25">
-        <label for="country">Day:</label>
+        <label for="country">Date:</label>
       </div>
       <div class="col-75">
         <select id="country" name="country">
@@ -91,9 +95,21 @@ include("head.php");
           <option value="usa">30</option>
         </select>
       </div>
-    </div>
+      <div class="col-25">
+        <label for="country">Day:</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="australia">Saturday</option>
+          <option value="canada">Sunday</option>
+          <option value="usa">Monday</option>
+          <option value="australia">Tuesday</option>
+          <option value="canada">Wednesday</option>
+          <option value="usa">Thursday</option>
+         <option value="usa">Friday</option>
+        </select>
+      </div>
 
-<div class="row">
       <div class="col-25">
         <label for="country">Month:</label>
       </div>
@@ -115,9 +131,7 @@ include("head.php");
                                   
         </select>
       </div>
-    </div>
 
-<div class="row">
       <div class="col-25">
         <label for="country">Year:</label>
       </div>
@@ -128,7 +142,7 @@ include("head.php");
           <option value="usa">2019</option>
         </select>
       </div>
-    </div>
+
    <div class="container-login100-form-btn">
 						<button class="login100-form-btn" type="submit" value="Submit">
 							Submit
