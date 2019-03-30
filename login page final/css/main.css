@@ -214,10 +214,8 @@ iframe {
   color: #333333;
   line-height: 1.2;
   text-align: center;
-
-  width: 100%;
   display: block;
-  padding-bottom: 54px;
+
 }
 
 
@@ -370,6 +368,8 @@ iframe {
 
   .login100-form {
     width: 50%;
+   
+    
   }
 }
 
