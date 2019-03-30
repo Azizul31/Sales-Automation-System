@@ -1,11 +1,10 @@
 <?php
-
-if (isset($_POST ['username']) && isset ($_POST ['password'])) {
-    $username = $_POST ['username'];
-    $password = $_POST ['password'];
+function query ($table, $username, $password, $link) {
+    $query = "SELECT ID, Password 
+                    FROM $table
+                    WHERE ID='$username' AND Password='$password'";
     
-    $password_hash = md5($password);
-    
+<<<<<<< HEAD
     if (!empty ($username) && !empty($password)) {
         
         $query = "SELECT ID, Password 
@@ -13,20 +12,55 @@ if (isset($_POST ['username']) && isset ($_POST ['password'])) {
                     WHERE Name='$username' AND Password='$password_hash'"; 
         
         if ($query_run = mysqli_query ($link, $query)) {
+=======
+    if ($query_run = mysqli_query ($link, $query)) {
+>>>>>>> cba331c7a8a1ffbae05e054ac1add9c61ee3d331
             $query_num_rows = mysqli_num_rows ($query_run);
             echo $query_num_rows;
             
             if ($query_num_rows == 0) {
-                echo 'Invalid username/password combo';
+                return 0;
             }
             else if ($query_num_rows == 1) {
+<<<<<<< HEAD
                 header("location: dataentry.php");
     exit;
+=======
+                return 1;
+>>>>>>> cba331c7a8a1ffbae05e054ac1add9c61ee3d331
                 /*$user_id = mysqli_result ($query_run, 0, 'id');
                 $_SESSION ['user_id'] = $user_id;
                 header ('Location: index.php');*/
             }
         }
+<<<<<<< HEAD
+=======
+}
+
+if (isset($_POST ['username']) && isset ($_POST ['password'])) {
+    $username = $_POST ['username'];
+    $password = $_POST ['password'];
+    
+    $password_hash = md5($password);
+    $exec = 'executives';
+    $exec = mysqli_real_escape_string ($link, $exec);
+    $reg = 'regional managers';
+    $reg = mysqli_real_escape_string ($link, $reg);
+    $ter = 'territory managers';
+    $ter = mysqli_real_escape_string ($link, $ter);
+    $sal = 'salesmen';
+    $sal = mysqli_real_escape_string ($link, $sal);
+    if (!empty ($username) && !empty($password)) {
+        
+        if (query ($exec, $username, $password_hash, $link)) echo 'exec ok';
+        else if (query ($reg, $username, $password_hash, $link)) echo 'reg ok';
+        else if (query ($ter, $username, $password_hash, $link)) echo 'ter ok';
+        else if (query ($sal, $username, $password_hash, $link)) echo 'sal ok';
+        else echo 'hoy nai';
+        
+        
+        
+>>>>>>> cba331c7a8a1ffbae05e054ac1add9c61ee3d331
     }
     else echo 'You must supply a username and password.';
 }
