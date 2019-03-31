@@ -46,7 +46,7 @@ if (!loggedin()) header("location: index.php");
         <label for="fname">Shop id:</label>
       </div>
       <div class="col-75">
-        <input type="text" id="fname" name="shopid" placeholder=name>
+        <input type="text" id="fname" name="shopid" placeholder="ShopID">
       </div>
      <div class="col-25">
         <label for="fname">Item 1 quantity:</label>
