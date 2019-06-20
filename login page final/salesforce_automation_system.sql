@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 31, 2019 at 05:41 AM
+-- Generation Time: Jun 20, 2019 at 04:47 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -145,7 +145,7 @@ INSERT INTO `regional managers` (`Name`, `ID`, `Password`, `Division`) VALUES
 --
 
 CREATE TABLE `sales details` (
-  `Bill no.` varchar(15) NOT NULL,
+  `Bill no.` int(15) NOT NULL,
   `Date` varchar(2) NOT NULL,
   `Month` varchar(10) NOT NULL,
   `Year` varchar(4) NOT NULL,
@@ -159,6 +159,37 @@ CREATE TABLE `sales details` (
   `Item 3 p` int(11) NOT NULL,
   `Total sale` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sales details`
+--
+
+INSERT INTO `sales details` (`Bill no.`, `Date`, `Month`, `Year`, `Day`, `Shop ID`, `Item 1`, `Item 2`, `Item 3`, `Item 1 p`, `Item 2 p`, `Item 3 p`, `Total sale`) VALUES
+(1, '03', 'February', '2019', 'Sunday', 'BAN1_1', 1, 2, 3, 30, 80, 135, 245),
+(2, '04', 'February', '2019', 'Sunday', 'BAN1_2', 10, 5, 10, 300, 200, 450, 950),
+(8, '04', 'February', '2019', 'Monday', 'BAN2_1', 3, 5, 7, 90, 200, 315, 605),
+(9, '05', 'February', '2019', 'Tuesday', 'CTGKOT_1', 5, 7, 8, 150, 280, 360, 790),
+(10, '05', 'February', '2019', 'Tuesday', 'CTGREAZ_1', 5, 6, 11, 150, 240, 495, 885),
+(11, '05', 'February', '2019', 'Tuesday', 'CTGREAZ_2', 4, 2, 15, 120, 80, 675, 875),
+(15, '06', 'February', '2019', 'Wednesday', 'DHN1_1', 15, 10, 5, 450, 400, 225, 1075),
+(17, '06', 'February', '2019', 'Wednesday', 'DHN1_2', 4, 3, 12, 120, 120, 540, 780),
+(18, '06', 'February', '2019', 'Wednesday', 'DHN2_1', 7, 10, 15, 210, 400, 675, 1285),
+(19, '06', 'February', '2019', 'Wednesday', 'FENIBAZ_1', 10, 7, 13, 300, 280, 585, 1165),
+(20, '06', 'February', '2019', 'Wednesday', 'FENIBAZ_2', 6, 6, 7, 180, 240, 315, 735),
+(21, '06', 'February', '2019', 'Wednesday', 'FENIBAZ_3', 7, 7, 10, 210, 280, 450, 940),
+(22, '06', 'February', '2019', 'Wednesday', 'FULBAZ_1', 5, 6, 11, 150, 240, 495, 885),
+(23, '07', 'February', '2019', 'Thursday', 'FULBAZ_2', 10, 15, 10, 300, 600, 450, 1350),
+(24, '07', 'February', '2019', 'Thursday', 'FULMAIN_1', 12, 2, 3, 360, 80, 135, 575),
+(25, '07', 'February', '2019', 'Thursday', 'GPBAZ_1', 15, 21, 3, 450, 840, 135, 1425),
+(26, '07', 'February', '2019', 'Thursday', 'GPBAZ_2', 12, 7, 3, 360, 280, 135, 775),
+(27, '10', 'February', '2019', 'Sunday', 'GPMAIN_1', 8, 2, 8, 240, 80, 360, 680),
+(28, '10', 'February', '2019', 'Sunday', 'HATBAZ_1', 4, 2, 10, 120, 80, 450, 650),
+(29, '10', 'February', '2019', 'Sunday', 'HATBAZ_2', 5, 0, 15, 150, 0, 675, 825),
+(30, '10', 'February', '2019', 'Sunday', 'HATMAIN_1', 15, 2, 3, 450, 80, 135, 665),
+(31, '11', 'February', '2019', 'Monday', 'KAPBAZ_1', 10, 20, 0, 300, 800, 0, 1100),
+(32, '11', 'February', '2019', 'Monday', 'KAPBAZ_2', 10, 2, 3, 300, 80, 135, 515),
+(33, '11', 'February', '2019', 'Monday', 'KAPMAIN_1', 5, 2, 3, 150, 80, 135, 365),
+(34, '13', 'February', '2019', 'Tuesday', 'SITABAZ_1', 6, 2, 6, 180, 80, 270, 530);
 
 -- --------------------------------------------------------
 
@@ -198,18 +229,18 @@ INSERT INTO `salesmen` (`Name`, `ID`, `Password`, `Area Code`) VALUES
 --
 
 CREATE TABLE `salesmen_tour_programme` (
-  `Salesman ID` varchar(15) NOT NULL,
+  `Salesman_ID` varchar(15) NOT NULL,
   `Date` varchar(2) NOT NULL,
   `Month` varchar(2) NOT NULL,
   `Day` varchar(10) NOT NULL,
-  `Market ID` varchar(30) NOT NULL
+  `Market_ID` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `salesmen_tour_programme`
 --
 
-INSERT INTO `salesmen_tour_programme` (`Salesman ID`, `Date`, `Month`, `Day`, `Market ID`) VALUES
+INSERT INTO `salesmen_tour_programme` (`Salesman_ID`, `Date`, `Month`, `Day`, `Market_ID`) VALUES
 ('SM_001', '2', '3', '2019', 'CTGREAZ'),
 ('SM_002', '2', '3', '2019', 'SITABAZ'),
 ('SM_003', '2', '3', '2019', 'HATBAZ'),
@@ -346,7 +377,7 @@ ALTER TABLE `salesmen`
 -- Indexes for table `salesmen_tour_programme`
 --
 ALTER TABLE `salesmen_tour_programme`
-  ADD PRIMARY KEY (`Salesman ID`);
+  ADD PRIMARY KEY (`Salesman_ID`);
 
 --
 -- Indexes for table `shops`
@@ -359,6 +390,16 @@ ALTER TABLE `shops`
 --
 ALTER TABLE `territory managers`
   ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `sales details`
+--
+ALTER TABLE `sales details`
+  MODIFY `Bill no.` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
