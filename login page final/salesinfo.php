@@ -48,8 +48,8 @@ h1.spacing
   background-color: whitesmoke;
   color: black;
 }
-    input[type=text] {
-  width: 130px;
+    .selection {
+  width: 220px;
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
@@ -62,9 +62,10 @@ h1.spacing
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
 }
-
-input[type=text]:focus {
+.selection:focus {
   width: 100%;
+}
+   
 }
     
 </style>
@@ -72,22 +73,53 @@ input[type=text]:focus {
 
 		<div class="container-login100"  >
 				<div class="login100-form validate-form">
-					<form class="login100-form validate-form" action= "" method="POST">
+					
 					<span>
                     <h1 class="spacing">Salesman Selection</h1>   <br>
 					</span>
 <div class="row">
       <div class="col-25">
-        <label for="fname"> Enter Name :</label>
+         <label for="fname"> Enter Name :</label>
+
       </div>
       <div class="col-75">
-        <input type="text" id="fname" name="firstname" placeholder="search...">
+        <form action="/action_page.php">
+  <select class="selection" name="cars">
+    <option value="Shahriar Ahmed">Shahriar Ahmed</option>
+    <option value="Ratul Roy">Ratul Roy</option>
+    <option value="Towhidur Alam">Towhidur Alam</option>
+    <option value="Labib Wahid">Labib Wahid</option>
+    <option value="Souharda Biswas">Souharda Biswas</option>
+    <option value="Yasir Mahbub">Yasir Mahbub</option>
+    <option value="Mahbub Alam">Mahbub Alam</option>
+    <option value="Abdullah Mamun">Abdullah Mamun</option>
+    <option value="Iqbal Hossain">Iqbal Hossain</option>
+    <option value="Kamrul Islam">Kamrul Islam</option>
+    <option value="Ashef Habib">Ashef Habib</option>
+    <option value="Mahidul Zihan">Mahidul Zihan</option>
+    
+                                            
+  </select>
+  <br><br>
+</form>
       </div>
     <div class="col-25">
-        <label for="fname"> Enter Region:</label>
+        <label for="fname"> Enter Region :</label>
       </div>
       <div class="col-75">
-        <input type="text" id="fname" name="firstname" placeholder="search...">
+       <form action="/action_page.php">
+  <select class="selection" name="cars">
+   <option value="Shahriar Ahmed">Dhaka</option>
+    <option value="Ratul Roy">Chittagong</option>
+    <option value="Towhidur Alam">Khulna</option>
+    <option value="Labib Wahid">Rajshahi</option>
+    <option value="Souharda Biswas">Rangpur</option>
+    <option value="Yasir Mahbub">Barisal</option>
+    <option value="Mahbub Alam">Sylhet</option>
+    <option value="Abdullah Mamun">Mymensingh</option>
+  </select>
+  <br><br>
+</form>
       </div>
       
    <div class="container-login100-form-btn">
@@ -95,7 +127,7 @@ input[type=text]:focus {
 							
 					</div>	
                     </div>
-    </form>
+
 
 
 
