@@ -95,12 +95,42 @@ h1.spacing
     <th>Total Sale</th>
     </tr>
     <tr>
-  </tr>
-   
+    </tr>
+    <?php
+
+        include 'connect.inc.php';
+        global $fetch;
+        $result = mysqli_query ($link, "select * from `sales details`") or die ("error");
+        //echo '<table style="width:100%;">';
+        if ($result)
+        {
+            while ($fetch = mysqli_fetch_assoc($result))
+            {
+                echo '<tr><td>'.$fetch['Bill no.'].'</td>'
+                .'<td>'.$fetch['Date'].'</td>'
+                .'<td>'.$fetch['Month'].'</td>'
+                .'<td>'.$fetch['Year'].'</td>'
+                .'<td>'.$fetch['Day'].'</td>'
+                .'<td>'.$fetch['Shop ID'].'</td>'
+                .'<td>'.$fetch['Item 1'].'</td>'
+                .'<td>'.$fetch['Item 2'].'</td>'
+                .'<td>'.$fetch['Item 3'].'</td>'
+                .'<td>'.$fetch['Item 1 p'].'</td>'
+                .'<td>'.$fetch['Item 2 p'].'</td>'
+                .'<td>'.$fetch['Item 3 p'].'</td>'
+                .'<td>'.$fetch['Total sale'].'</td></tr>';
+            }
+        }
+    
+    
+
+    ?>
+
+
                          
   
 </table>
-                    </body>
+</body>
 <?php
 
 include("foot.php");
