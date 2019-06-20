@@ -1,7 +1,7 @@
 <?php
 include("head.php");
 ?>
-<title>Sales Details</title>
+<title>Tour Details</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 .col-25 {
