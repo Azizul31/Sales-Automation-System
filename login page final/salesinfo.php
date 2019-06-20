@@ -58,7 +58,7 @@ h1.spacing
   background-image: url('searchicon.png');
   background-position: 10px 10px; 
   background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
+  padding: 2px 20px 2px 40px;
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
 }
@@ -97,30 +97,85 @@ h1.spacing
     <option value="Kamrul Islam">Kamrul Islam</option>
     <option value="Ashef Habib">Ashef Habib</option>
     <option value="Mahidul Zihan">Mahidul Zihan</option>
-    
-                                            
-  </select>
+ </select>
   <br><br>
-</form>
-      </div>
+     </div>
     <div class="col-25">
-        <label for="fname"> Enter Region :</label>
+        <label for="fname"> Date :</label>
       </div>
       <div class="col-75">
-       <form action="/action_page.php">
+      
   <select class="selection" name="cars">
-   <option value="Shahriar Ahmed">Dhaka</option>
-    <option value="Ratul Roy">Chittagong</option>
-    <option value="Towhidur Alam">Khulna</option>
-    <option value="Labib Wahid">Rajshahi</option>
-    <option value="Souharda Biswas">Rangpur</option>
-    <option value="Yasir Mahbub">Barisal</option>
-    <option value="Mahbub Alam">Sylhet</option>
-    <option value="Abdullah Mamun">Mymensingh</option>
+    <option value="">01</option>
+    <option value="">02</option>
+    <option value="">03</option>
+    <option value="">04</option>
+    <option value="">05</option>
+    <option value="">06</option>
+    <option value="">07</option>
+    <option value="">08</option>
+    <option value="">09</option>
+    <option value="">10</option>
+    <option value="">11</option>
+    <option value="">12</option>
+    <option value="">13</option>
+    <option value="">14</option>
+    <option value="">15</option>
+    <option value="">16</option>
+    <option value="">17</option>
+    <option value="">18</option>
+    <option value="">19</option>
+    <option value="">20</option>
+    <option value="">21</option>
+    <option value="">22</option>
+    <option value="">23</option>
+    <option value="">24</option>
+    <option value="">25</option>
+    <option value="">26</option>
+    <option value="">27</option>
+    <option value="">28</option>
+    <option value="">29</option>
+    <option value="">30</option>
+    <option value="">31</option>
   </select>
   <br><br>
+          </div>
+    <div class="col-25">
+      <label for="fname"> Month :</label>
+     </div>
+    <div class="col-75">
+      
+  <select class="selection" name="cars">
+    <option value="">January</option>
+    <option value="">February</option>
+    <option value="">March</option>
+    <option value="">April</option>
+    <option value="">May</option>
+    <option value="">June</option>
+    <option value="">July</option>
+    <option value="">August</option>
+    <option value="">September</option>
+    <option value="">October</option>
+    <option value="">November</option>
+    <option value="">December</option>
+  </select>
+  <br><br>
+         </div>
+          <div class="col-25">
+      <label for="fname"> Year :</label>
+     </div>
+    <div class="col-75">
+      
+  <select class="selection" name="cars">
+    <option value="">2019</option>
+    <option value="">2018</option>
+    <option value="">2017</option>
+  </select>
+  <br><br>
+         </div>
 </form>
-      </div>
+     
+   
       
    <div class="container-login100-form-btn">
 						<input class="login100-form-btn" type="submit" value="Submit">
