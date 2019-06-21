@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2019 at 04:47 PM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.2
+-- Generation Time: Jun 21, 2019 at 05:03 PM
+-- Server version: 10.1.19-MariaDB
+-- PHP Version: 5.6.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -145,7 +143,7 @@ INSERT INTO `regional managers` (`Name`, `ID`, `Password`, `Division`) VALUES
 --
 
 CREATE TABLE `sales details` (
-  `Bill no.` int(15) NOT NULL,
+  `Bill no.` varchar(15) NOT NULL,
   `Date` varchar(2) NOT NULL,
   `Month` varchar(10) NOT NULL,
   `Year` varchar(4) NOT NULL,
@@ -159,37 +157,6 @@ CREATE TABLE `sales details` (
   `Item 3 p` int(11) NOT NULL,
   `Total sale` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `sales details`
---
-
-INSERT INTO `sales details` (`Bill no.`, `Date`, `Month`, `Year`, `Day`, `Shop ID`, `Item 1`, `Item 2`, `Item 3`, `Item 1 p`, `Item 2 p`, `Item 3 p`, `Total sale`) VALUES
-(1, '03', 'February', '2019', 'Sunday', 'BAN1_1', 1, 2, 3, 30, 80, 135, 245),
-(2, '04', 'February', '2019', 'Sunday', 'BAN1_2', 10, 5, 10, 300, 200, 450, 950),
-(8, '04', 'February', '2019', 'Monday', 'BAN2_1', 3, 5, 7, 90, 200, 315, 605),
-(9, '05', 'February', '2019', 'Tuesday', 'CTGKOT_1', 5, 7, 8, 150, 280, 360, 790),
-(10, '05', 'February', '2019', 'Tuesday', 'CTGREAZ_1', 5, 6, 11, 150, 240, 495, 885),
-(11, '05', 'February', '2019', 'Tuesday', 'CTGREAZ_2', 4, 2, 15, 120, 80, 675, 875),
-(15, '06', 'February', '2019', 'Wednesday', 'DHN1_1', 15, 10, 5, 450, 400, 225, 1075),
-(17, '06', 'February', '2019', 'Wednesday', 'DHN1_2', 4, 3, 12, 120, 120, 540, 780),
-(18, '06', 'February', '2019', 'Wednesday', 'DHN2_1', 7, 10, 15, 210, 400, 675, 1285),
-(19, '06', 'February', '2019', 'Wednesday', 'FENIBAZ_1', 10, 7, 13, 300, 280, 585, 1165),
-(20, '06', 'February', '2019', 'Wednesday', 'FENIBAZ_2', 6, 6, 7, 180, 240, 315, 735),
-(21, '06', 'February', '2019', 'Wednesday', 'FENIBAZ_3', 7, 7, 10, 210, 280, 450, 940),
-(22, '06', 'February', '2019', 'Wednesday', 'FULBAZ_1', 5, 6, 11, 150, 240, 495, 885),
-(23, '07', 'February', '2019', 'Thursday', 'FULBAZ_2', 10, 15, 10, 300, 600, 450, 1350),
-(24, '07', 'February', '2019', 'Thursday', 'FULMAIN_1', 12, 2, 3, 360, 80, 135, 575),
-(25, '07', 'February', '2019', 'Thursday', 'GPBAZ_1', 15, 21, 3, 450, 840, 135, 1425),
-(26, '07', 'February', '2019', 'Thursday', 'GPBAZ_2', 12, 7, 3, 360, 280, 135, 775),
-(27, '10', 'February', '2019', 'Sunday', 'GPMAIN_1', 8, 2, 8, 240, 80, 360, 680),
-(28, '10', 'February', '2019', 'Sunday', 'HATBAZ_1', 4, 2, 10, 120, 80, 450, 650),
-(29, '10', 'February', '2019', 'Sunday', 'HATBAZ_2', 5, 0, 15, 150, 0, 675, 825),
-(30, '10', 'February', '2019', 'Sunday', 'HATMAIN_1', 15, 2, 3, 450, 80, 135, 665),
-(31, '11', 'February', '2019', 'Monday', 'KAPBAZ_1', 10, 20, 0, 300, 800, 0, 1100),
-(32, '11', 'February', '2019', 'Monday', 'KAPBAZ_2', 10, 2, 3, 300, 80, 135, 515),
-(33, '11', 'February', '2019', 'Monday', 'KAPMAIN_1', 5, 2, 3, 150, 80, 135, 365),
-(34, '13', 'February', '2019', 'Tuesday', 'SITABAZ_1', 6, 2, 6, 180, 80, 270, 530);
 
 -- --------------------------------------------------------
 
@@ -229,30 +196,31 @@ INSERT INTO `salesmen` (`Name`, `ID`, `Password`, `Area Code`) VALUES
 --
 
 CREATE TABLE `salesmen_tour_programme` (
-  `Salesman_ID` varchar(15) NOT NULL,
+  `Salesman ID` varchar(15) NOT NULL,
   `Date` varchar(2) NOT NULL,
   `Month` varchar(2) NOT NULL,
+  `Year` varchar(10) NOT NULL,
   `Day` varchar(10) NOT NULL,
-  `Market_ID` varchar(30) NOT NULL
+  `Market ID` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `salesmen_tour_programme`
 --
 
-INSERT INTO `salesmen_tour_programme` (`Salesman_ID`, `Date`, `Month`, `Day`, `Market_ID`) VALUES
-('SM_001', '2', '3', '2019', 'CTGREAZ'),
-('SM_002', '2', '3', '2019', 'SITABAZ'),
-('SM_003', '2', '3', '2019', 'HATBAZ'),
-('SM_004', '2', '3', '2019', 'FENIBAZ'),
-('SM_005', '2', '3', '2019', 'FULMAIN'),
-('SM_006', '2', '3', '2019', 'SONMAIN'),
-('SM_007', '2', '3', '2019', 'BAN1'),
-('SM_008', '2', '3', '2019', 'DHN1'),
-('SM_009', '2', '3', '2019', 'UTT1'),
-('SM_010', '2', '3', '2019', 'GPBAZ'),
-('SM_011', '2', '3', '2019', 'KAPMAIN'),
-('SM_012', '2', '3', '2019', 'SREBAZ');
+INSERT INTO `salesmen_tour_programme` (`Salesman ID`, `Date`, `Month`, `Year`, `Day`, `Market ID`) VALUES
+('SM_001', '23', '6', '2019', 'Sunday', 'CTGREAZ'),
+('SM_002', '22', '6', '2019', 'Sunday', 'SITABAZ'),
+('SM_003', '23', '6', '2019', 'Sunday', 'HATBAZ'),
+('SM_004', '22', '6', '2019', 'Sunday', 'FENIBAZ'),
+('SM_005', '23', '6', '2019', 'Sunday', 'FULMAIN'),
+('SM_006', '23', '6', '2019', 'Sunday', 'SONMAIN'),
+('SM_007', '22', '6', '2019', 'Sunday', 'BAN1'),
+('SM_008', '23', '6', '2019', 'Sunday', 'DHN1'),
+('SM_009', '23', '6', '2019', 'Sunday', 'UTT1'),
+('SM_010', '22', '6', '2019', 'Sunday', 'GPBAZ'),
+('SM_011', '23', '6', '2019', 'Sunday', 'KAPMAIN'),
+('SM_012', '23', '6', '2019', 'Sunday', 'SREBAZ');
 
 -- --------------------------------------------------------
 
@@ -265,50 +233,80 @@ CREATE TABLE `shops` (
   `Shop ID` varchar(15) NOT NULL,
   `Market` varchar(30) NOT NULL,
   `Market ID` varchar(15) NOT NULL,
-  `Area Code` varchar(15) NOT NULL
+  `Area Code` varchar(15) NOT NULL,
+  `District` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `shops`
 --
 
-INSERT INTO `shops` (`Name`, `Shop ID`, `Market`, `Market ID`, `Area Code`) VALUES
-('Store 19', 'BAN1_1', 'Banani 1', 'BAN1', 'DHK_1'),
-('Store 20', 'BAN1_2', 'Banani 1', 'BAN1', 'DHK_1'),
-('Store 21', 'BAN2_1', 'Banani 2', 'BAN2', 'DHK_1'),
-('Store 3', 'CTGKOT_1', 'Kotowali', 'CTGKOT', 'CTG_1'),
-('Store 1', 'CTGREAZ_1', 'Reazuddin Bazar', 'CTGREAZ', 'CTG_1'),
-('Store 2', 'CTGREAZ_2', 'Reazuddin Bazar', 'CTGREAZ', 'CTG_1'),
-('Store 22', 'DHN1_1', 'Dhanmondi 1', 'DHN1', 'DHK_2'),
-('Store 23', 'DHN1_2', 'Dhanmondi 1', 'DHN1', 'DHK_2'),
-('Store 24', 'DHN2_1', 'Dhanmondi 2', 'DHN2', 'DHK_2'),
-('Store 10', 'FENIBAZ_1', 'Feni Bazar', 'FENIBAZ', 'FENI_1'),
-('Store 11', 'FENIBAZ_2', 'Feni Bazar', 'FENIBAZ', 'FENI_1'),
-('Store 12', 'FENIMAIN_3', 'Feni Main Road', 'FENIMAIN', 'FENI_1'),
-('Store 13', 'FULBAZ_1', 'Fulgazi Bazar', 'FULBAZ', 'FENI_2'),
-('Store 14', 'FULBAZ_2', 'Fulgazi Bazar', 'FULBAZ', 'FENI_2'),
-('Store 15', 'FULMAIN_1', 'Fulgazi Main Road', 'FULMAIN', 'FENI_2'),
-('Store 28', 'GPBAZ_1', 'Gazipur Bazar', 'GPBAZ', 'GP_1'),
-('Store 29', 'GPBAZ_2', 'Gazipur Bazar', 'GPBAZ', 'GP_1'),
-('Store 30', 'GPMAIN_1', 'Gazipur Main Road', 'GPMAIN', 'GP_1'),
-('Store 7', 'HATBAZ_1', 'Hathazari Bazar', 'HATBAZ', 'CTG_3'),
-('Store 8', 'HATBAZ_2', 'Hathazari Bazar', 'HATBAZ', 'CTG_3'),
-('Store 9', 'HATMAIN_1', 'Hathazari Main Road', 'HATMAIN', 'CTG_3'),
-('Store 31', 'KAPBAZ_1', 'Kapasia Bazar', 'KAPBAZ', 'GP_2'),
-('Store 32', 'KAPBAZ_2', 'Kapasia Bazar', 'KAPBAZ', 'GP_2'),
-('Store 33', 'KAPMAIN_1', 'Kapasia Main Road', 'KAPMAIN', 'GP_2'),
-('Store 4', 'SITABAZ_1', 'Sitakunda Bazar', 'SITABAZ', 'CTG_2'),
-('Store 5', 'SITABAZ_2', 'Sitakunda Bazar', 'SITABAZ', 'CTG_2'),
-('Store 6', 'SITAMAIN_3', 'Sitakunda Main Road', 'SITAMAIN', 'CTG_2'),
-('Store 16', 'SONBAZ_1', 'Sonagazi Bazar', 'SONBAZ', 'FENI_3'),
-('Store 17', 'SONBAZ_2', 'Sonagazi Bazar', 'SONBAZ', 'FENI_3'),
-('Store 18', 'SONMAIN_1', 'Sonagazi Main Road', 'SONMAIN', 'FENI_3'),
-('Store 34', 'SREBAZ_1', 'Sreepur Bazar', 'SREBAZ', 'GP_3'),
-('Store 35', 'SREBAZ_2', 'Sreepur Bazar', 'SREBAZ', 'GP_3'),
-('Store 36', 'SREMAIN_1', 'Sreepur Main Road', 'SREMAIN', 'GP_3'),
-('Store 25', 'UTT1_1', 'Uttara 1', 'UTT1', 'DHK_3'),
-('Store 26', 'UTT1_2', 'Uttara 1', 'UTT1', 'DHK_3'),
-('Store 27', 'UTT2_1', 'Uttara 2', 'UTT2', 'DHK_3');
+INSERT INTO `shops` (`Name`, `Shop ID`, `Market`, `Market ID`, `Area Code`, `District`) VALUES
+('Store 19', 'BAN1_1', 'Banani 1', 'BAN1', 'DHK_1', 'DHAKA'),
+('Store 20', 'BAN1_2', 'Banani 1', 'BAN1', 'DHK_1', 'DHAKA'),
+('Store 21', 'BAN2_1', 'Banani 2', 'BAN2', 'DHK_1', 'DHAKA'),
+('Store 3', 'CTGKOT_1', 'Kotowali', 'CTGKOT', 'CTG_1', 'CHATTAGRAM'),
+('Store 1', 'CTGREAZ_1', 'Reazuddin Bazar', 'CTGREAZ', 'CTG_1', 'CHATTAGRAM'),
+('Store 2', 'CTGREAZ_2', 'Reazuddin Bazar', 'CTGREAZ', 'CTG_1', 'CHATTAGRAM'),
+('Store 22', 'DHN1_1', 'Dhanmondi 1', 'DHN1', 'DHK_2', 'DHAKA'),
+('Store 23', 'DHN1_2', 'Dhanmondi 1', 'DHN1', 'DHK_2', 'DHAKA'),
+('Store 24', 'DHN2_1', 'Dhanmondi 2', 'DHN2', 'DHK_2', 'DHAKA'),
+('Store 10', 'FENIBAZ_1', 'Feni Bazar', 'FENIBAZ', 'FENI_1', 'CHATTAGRAM'),
+('Store 11', 'FENIBAZ_2', 'Feni Bazar', 'FENIBAZ', 'FENI_1', 'CHATTAGRAM'),
+('Store 12', 'FENIMAIN_3', 'Feni Main Road', 'FENIMAIN', 'FENI_1', 'CHATTAGRAM'),
+('Store 13', 'FULBAZ_1', 'Fulgazi Bazar', 'FULBAZ', 'FENI_2', 'CHATTAGRAM'),
+('Store 14', 'FULBAZ_2', 'Fulgazi Bazar', 'FULBAZ', 'FENI_2', 'CHATTAGRAM'),
+('Store 15', 'FULMAIN_1', 'Fulgazi Main Road', 'FULMAIN', 'FENI_2', 'CHATTAGRAM'),
+('Store 28', 'GPBAZ_1', 'Gazipur Bazar', 'GPBAZ', 'GP_1', 'DHAKA'),
+('Store 29', 'GPBAZ_2', 'Gazipur Bazar', 'GPBAZ', 'GP_1', 'DHAKA'),
+('Store 30', 'GPMAIN_1', 'Gazipur Main Road', 'GPMAIN', 'GP_1', 'DHAKA'),
+('Store 7', 'HATBAZ_1', 'Hathazari Bazar', 'HATBAZ', 'CTG_3', 'CHATTAGRAM'),
+('Store 8', 'HATBAZ_2', 'Hathazari Bazar', 'HATBAZ', 'CTG_3', 'CHATTAGRAM'),
+('Store 9', 'HATMAIN_1', 'Hathazari Main Road', 'HATMAIN', 'CTG_3', 'CHATTAGRAM'),
+('Store 31', 'KAPBAZ_1', 'Kapasia Bazar', 'KAPBAZ', 'GP_2', 'DHAKA'),
+('Store 32', 'KAPBAZ_2', 'Kapasia Bazar', 'KAPBAZ', 'GP_2', 'DHAKA'),
+('Store 33', 'KAPMAIN_1', 'Kapasia Main Road', 'KAPMAIN', 'GP_2', 'DHAKA'),
+('Store 4', 'SITABAZ_1', 'Sitakunda Bazar', 'SITABAZ', 'CTG_2', 'CHATTAGRAM'),
+('Store 5', 'SITABAZ_2', 'Sitakunda Bazar', 'SITABAZ', 'CTG_2', NULL),
+('Store 6', 'SITAMAIN_3', 'Sitakunda Main Road', 'SITAMAIN', 'CTG_2', NULL),
+('Store 16', 'SONBAZ_1', 'Sonagazi Bazar', 'SONBAZ', 'FENI_3', NULL),
+('Store 17', 'SONBAZ_2', 'Sonagazi Bazar', 'SONBAZ', 'FENI_3', NULL),
+('Store 18', 'SONMAIN_1', 'Sonagazi Main Road', 'SONMAIN', 'FENI_3', NULL),
+('Store 34', 'SREBAZ_1', 'Sreepur Bazar', 'SREBAZ', 'GP_3', NULL),
+('Store 35', 'SREBAZ_2', 'Sreepur Bazar', 'SREBAZ', 'GP_3', NULL),
+('Store 36', 'SREMAIN_1', 'Sreepur Main Road', 'SREMAIN', 'GP_3', NULL),
+('Store 25', 'UTT1_1', 'Uttara 1', 'UTT1', 'DHK_3', NULL),
+('Store 26', 'UTT1_2', 'Uttara 1', 'UTT1', 'DHK_3', NULL),
+('Store 27', 'UTT2_1', 'Uttara 2', 'UTT2', 'DHK_3', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `target`
+--
+
+CREATE TABLE `target` (
+  `ID` varchar(10) NOT NULL,
+  `Monthly_target` int(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `target`
+--
+
+INSERT INTO `target` (`ID`, `Monthly_target`) VALUES
+('SM_001', 2000),
+('SM_002', 2500),
+('SM_003', 2200),
+('SM_004', 3000),
+('SM_005', 3500),
+('SM_006', 2500),
+('SM_007', 3300),
+('SM_008', 4000),
+('SM_009', 2000),
+('SM_010', 2500),
+('SM_011', 2800),
+('SM_012', 3300);
 
 -- --------------------------------------------------------
 
@@ -377,7 +375,7 @@ ALTER TABLE `salesmen`
 -- Indexes for table `salesmen_tour_programme`
 --
 ALTER TABLE `salesmen_tour_programme`
-  ADD PRIMARY KEY (`Salesman_ID`);
+  ADD PRIMARY KEY (`Salesman ID`);
 
 --
 -- Indexes for table `shops`
@@ -390,17 +388,6 @@ ALTER TABLE `shops`
 --
 ALTER TABLE `territory managers`
   ADD PRIMARY KEY (`ID`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `sales details`
---
-ALTER TABLE `sales details`
-  MODIFY `Bill no.` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
