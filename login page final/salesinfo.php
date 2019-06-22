@@ -1,5 +1,5 @@
 <?php
-include("head.php");
+include("head2.php");
 ?>
 <title>Tour Details</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -173,14 +173,14 @@ h1.spacing
   </select>
   <br><br>
          </div>
+           <div class="container-login100-form-btn">
+						<input class="login100-form-btn" type="submit" value="Submit">
+							
+					</div>	
 </form>
      
    
       
-   <div class="container-login100-form-btn">
-						<input class="login100-form-btn" type="submit" value="Submit">
-							
-					</div>	
                     </div>
 
 

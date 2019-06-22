@@ -2,7 +2,7 @@
 ob_start();
 include 'core.inc.php';
 include 'connect.inc.php';
-include("head.php");
+include("head2.php");
 
 echo $_SESSION['user_id'];
 if (!loggedin()) header("location: index.php");

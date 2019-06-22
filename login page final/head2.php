@@ -53,10 +53,12 @@
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-          <li class="active"><a href="loginform.inc.php">Home</a></li>
-          <li><a href="About_us.php">About Us</a></li>
-          <li><a href="Services.php">Services</a></li>
-          <li><a href="Contact_us.php">Contact Us</a></li>
+          <li class="active"><a href="#intro">Dashboard</a></li>
+             <li class="active"><a href="#intro">Sales Details</a></li>
+             <li class="active"><a href="#intro">Performance Report</a></li>
+             <li class="active"><a href="#intro">Tour Plan</a></li>
+           <li class="active"><a href="#intro">Username</a></li>
+          <li class="active"><a href="#intro"> Logout</a></li>
         </ul>
       </nav><!-- .main-nav -->
       

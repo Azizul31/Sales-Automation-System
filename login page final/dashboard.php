@@ -1,5 +1,5 @@
 <?php
-include("head.php");
+include("head2.php");
 $dataPoints = array( 
 	array("y" => 3373.64, "label" => "Germany" ),
 	array("y" => 2435.94, "label" => "France" ),

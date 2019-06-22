@@ -1,7 +1,7 @@
 <?php
-include("head2.php");
+include("head.php");
 ?>
-<title>Tour Details</title>
+<title>Services</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 .col-25 {
@@ -28,6 +28,19 @@ h1.spacing
     {
         text-align: center;
         padding-bottom: 0px;
+    }
+    p.spacing
+    {
+        text-align:left;
+        padding-left: 10px;
+        font-family: sans-serif;
+        font-size: 20px;
+        color: #333333;
+        line-height: 1.2;
+        text-align: center;
+        display: block;
+        padding-bottom: 70px;
+        padding-top: 30px;
     }
     
 #customers {
@@ -73,76 +86,33 @@ h1.spacing
 
 		<div class="container-login100"  >
 				<div class="login100-form validate-form">
-					
+					<div class="login100-form-title">
 					<span>
-                    <h1 class="spacing">Salesman Selection</h1>   <br>
+                    <h1 class="spacing">Our Services!</h1>   <br>
 					</span>
-<div class="row">
-      <div class="col-25">
-         <label for="fname"> Enter Name :</label>
-
-      </div>
-      <div class="col-75">
-        <form action="/action_page.php">
-  <select class="selection" name="cars">
-    <option value="Shahriar Ahmed">Shahriar Ahmed</option>
-    <option value="Ratul Roy">Ratul Roy</option>
-    <option value="Towhidur Alam">Towhidur Alam</option>
-    <option value="Labib Wahid">Labib Wahid</option>
-    <option value="Souharda Biswas">Souharda Biswas</option>
-    <option value="Yasir Mahbub">Yasir Mahbub</option>
-    <option value="Mahbub Alam">Mahbub Alam</option>
-    <option value="Abdullah Mamun">Abdullah Mamun</option>
-    <option value="Iqbal Hossain">Iqbal Hossain</option>
-    <option value="Kamrul Islam">Kamrul Islam</option>
-    <option value="Ashef Habib">Ashef Habib</option>
-    <option value="Mahidul Zihan">Mahidul Zihan</option>
- </select>
-  <br><br>
-  
-</form>
-     
-   
-      
-   <div class="container-login100-form-btn">
-						<input class="login100-form-btn" type="submit" value="Submit">
-							
-					</div>	
-                    </div>
-
-
-
-
-
-        
-      </div>
+                        </div>
+            </div>
+            </div>
+            </div>
             
-</div>
+
       
-    </div>
     <body>
          
-
-<table id="customers">
-  <tr>
-    <th>Name</th>
-    <th>Salesman ID</th>
-    <th>Date</th>
-    <th>Month</th>
-    <th>Day</th>
-    <th>Market ID</th>
-    </tr>
-    <tr>
-    </tr>
-    <?php
-       
-    
-    ?>
-
-
-                         
+<p class="spacing">1.Double Edge Blade<br>
+    2.Half blade<br>
+    3.Adoro MAX<br>
+    4.Adoro Swift<br>
+    5.Velvet<br>
+    6.Comfort<br>
+    7.Sharp blue<br>
+    8.Adoro XL<br>
+    9.Adoro Shaver<br>
+    10.Shaving Foam<br>
+    11.Ballpen
+        </p>
+        </div>
   
-</table>
 </body>
 <?php
 include("foot.php");

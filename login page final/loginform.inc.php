@@ -51,7 +51,7 @@ if (isset($_POST ['username']) && isset ($_POST ['password'])) {
 include("head.php");
 
 ?>
-
+<title>SRBIL</title>
 <div class="limiter">
 
 		<div class="container-login100">
