@@ -359,10 +359,11 @@ include("head.php");
                             </div>
                         </div>
                         <br>
+                        <br>
                         <!-- Pie Chart -->
                         <div>
                             <div class="row">
-
+                                
                                 <!-- Area Chart -->
                                 <div class="col-xl-8 col-lg-7">
                                     <div class="card shadow mb-4">
