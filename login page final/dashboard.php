@@ -89,18 +89,18 @@ $salesman12 = salesman_sale($link, "SM_012");
 
 
 $dataPoints1 = array(
-    array("y" => $salesman1, "label" => "Shahriar Ahmed"),
-    array("y" => $salesman2, "label" => "Ratul Roy"),
-    array("y" => $salesman3, "label" => "Towhidur Alam"),
-    array("y" => $salesman4, "label" => "Labib Wahid"),
-    array("y" => $salesman5, "label" => "Souharda Biswas"),
-    array("y" => $salesman6, "label" => "Yasir Mahbub"),
-    array("y" => $salesman7, "label" => "Mahbub Alam"),
-    array("y" => $salesman8, "label" => "Abdullah Mamun"),
-    array("y" => $salesman9, "label" => "Iqbal Hossain"),
-    array("y" => $salesman10, "label" => "Kamrul Isalm"),
-    array("y" => $salesman11, "label" => "Ashef Habib"),
-    array("y" => $salesman12, "label" => "Mahidul Zihan"),
+    array("y" => $salesman1, "label" => "Shahriar"),
+    array("y" => $salesman2, "label" => "Ratul"),
+    array("y" => $salesman3, "label" => "Towhidur"),
+    array("y" => $salesman4, "label" => "Labib"),
+    array("y" => $salesman5, "label" => "Souharda"),
+    array("y" => $salesman6, "label" => "Yasir"),
+    array("y" => $salesman7, "label" => "Mahbub"),
+    array("y" => $salesman8, "label" => "Abdullah"),
+    array("y" => $salesman9, "label" => "Iqbal"),
+    array("y" => $salesman10, "label" => "Kamrul"),
+    array("y" => $salesman11, "label" => "Ashef"),
+    array("y" => $salesman12, "label" => "Mahidul"),
 );
 
 //Total monthly sale
@@ -346,7 +346,7 @@ include("head.php");
                                 <div class="card shadow mb-4">
                                     <!-- Card Header - Dropdown -->
                                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                        <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
+                                        <h6 class="m-0 font-weight-bold text-primary">Sales Overview</h6>
                                     </div>
                                     <!-- Card Body -->
                                     <div class="card-body">
@@ -358,7 +358,7 @@ include("head.php");
                                 </div>
                             </div>
                         </div>
-
+                        <br>
                         <!-- Pie Chart -->
                         <div>
                             <div class="row">
@@ -367,16 +367,14 @@ include("head.php");
                                 <div class="col-xl-8 col-lg-7">
                                     <div class="card shadow mb-4">
                                         <!-- Card Header - Dropdown -->
-                                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                            <h6 class="m-0 font-weight-bold text-primary">Earnings Overview 2</h6>
-                                        </div>
+                                       
                                         <!-- Card Body -->
-                                        <div class="card-body">
+                                        
                                             <div class="chart-area">
-                                                <div id="chartContainer2" style="height: 370px; width: 100%;"></div>
+                                                <div id="chartContainer2" style="height: 370px; width: 150%;"></div>
                                                 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
                                             </div>
-                                        </div>
+                                        
                                     </div>
                                 </div>
 
