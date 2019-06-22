@@ -195,7 +195,7 @@ include("head.php");
                 },
                 data: [{
                         type: "column",
-                        yValueFormatString: "#,##0.## tonnes",
+                        yValueFormatString: "#,##0.## taka",
                         dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
                     }]
             });
@@ -212,7 +212,7 @@ include("head.php");
                 },
                 data: [{
                         type: "column",
-                        yValueFormatString: "#,##0.## tonnes",
+                        yValueFormatString: "#,##0.## taka",
                         dataPoints: <?php echo json_encode($dataPoints1, JSON_NUMERIC_CHECK); ?>
                     }]
             });
