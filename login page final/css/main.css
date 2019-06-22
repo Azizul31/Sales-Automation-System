@@ -29,9 +29,10 @@
 [ RESTYLE TAG ]*/
 
 * {
-	margin: 0px; 
+	margin: 10px; 
 	padding: 0px; 
 	box-sizing: border-box;
+    
 }
 
 body, html {

@@ -53,7 +53,7 @@
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-          <li class="active"><a href="loginform.inc.php">Home</a></li>
+          <li><a href="loginform.inc.php">Home</a></li>
           <li><a href="About_us.php">About Us</a></li>
           <li><a href="Services.php">Services</a></li>
           <li><a href="Contact_us.php">Contact Us</a></li>

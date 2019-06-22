@@ -1,5 +1,5 @@
 <?php
-include("head2.php");
+include("head.php");
 ?>
 <title>Tour Details</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -83,32 +83,31 @@ h1.spacing
 
       </div>
       <div class="col-75">
-        <form action="/action_page.php">
-  <select class="selection" name="cars">
-    <option value="Shahriar Ahmed">Shahriar Ahmed</option>
-    <option value="Ratul Roy">Ratul Roy</option>
-    <option value="Towhidur Alam">Towhidur Alam</option>
-    <option value="Labib Wahid">Labib Wahid</option>
-    <option value="Souharda Biswas">Souharda Biswas</option>
-    <option value="Yasir Mahbub">Yasir Mahbub</option>
-    <option value="Mahbub Alam">Mahbub Alam</option>
-    <option value="Abdullah Mamun">Abdullah Mamun</option>
-    <option value="Iqbal Hossain">Iqbal Hossain</option>
-    <option value="Kamrul Islam">Kamrul Islam</option>
-    <option value="Ashef Habib">Ashef Habib</option>
-    <option value="Mahidul Zihan">Mahidul Zihan</option>
+          <form action="tourplan.php" method="POST">
+  <select class="selection" name="salesman">
+    <option value="SM_001">Shahriar Ahmed</option>
+    <option value="SM_002">Ratul Roy</option>
+    <option value="SM_003">Towhidur Alam</option>
+    <option value="SM_004">Labib Wahid</option>
+    <option value="SM_005">Souharda Biswas</option>
+    <option value="SM_006">Yasir Mahbub</option>
+    <option value="SM_007">Mahbub Alam</option>
+    <option value="SM_008">Abdullah Mamun</option>
+    <option value="SM_009">Iqbal Hossain</option>
+    <option value="SM_010">Kamrul Islam</option>
+    <option value="SM_011">Ashef Habib</option>
+    <option value="SM_012">Mahidul Zihan</option>
  </select>
   <br><br>
-  
-</form>
-     
-   
-      
-   <div class="container-login100-form-btn">
+     <div class="container-login100-form-btn">
 						<input class="login100-form-btn" type="submit" value="Submit">
 							
 					</div>	
                     </div>
+</form>
+     
+   
+      
 
 
 
@@ -135,7 +134,41 @@ h1.spacing
     <tr>
     </tr>
     <?php
-       
+        include 'connect.inc.php';
+        global $fetch;
+        if ((isset($_POST['salesman']) && !empty($_POST['salesman']))) {
+            $user_id = $_POST['salesman'];
+            $result = mysqli_query ($link, "SELECT `salesmen`.`Name`,`salesmen_tour_programme`.`Date`,"
+                    ."`salesmen_tour_programme`.`Day`,`salesmen_tour_programme`.`Month`,"
+                    ."`salesmen_tour_programme`.`Market_ID`, `salesmen`.`ID` "
+                    ."FROM `salesmen_tour_programme` "
+                    ."JOIN `salesmen` ON `salesmen_tour_programme`.`Salesman_ID`='".$user_id."' "
+                    ."AND `salesmen`.`ID`='".$user_id."'")
+                    or die("error");
+            //echo '<table style="width:100%;">';
+            
+        }
+        else {
+            $result = mysqli_query ($link, "SELECT `salesmen`.`Name`,`salesmen_tour_programme`.`Date`,"
+                    ."`salesmen_tour_programme`.`Day`,`salesmen_tour_programme`.`Month`,"
+                    ."`salesmen_tour_programme`.`Market_ID`, `salesmen`.`ID` FROM `salesmen_tour_programme` "
+                    ."JOIN `salesmen` ON `salesmen_tour_programme`.`Salesman_ID`=`salesmen`.`ID`")
+                    or die ("error");
+        }
+        
+        if ($result)
+            {
+                while ($fetch = mysqli_fetch_assoc($result))
+                {
+                    echo '<tr><td>'.$fetch['Name'].'</td>'
+                    .'<td>'.$fetch['ID'].'</td>'
+                    .'<td>'.$fetch['Date'].'</td>'
+                    .'<td>'.$fetch['Month'].'</td>'
+                    .'<td>'.$fetch['Day'].'</td>'
+                    .'<td>'.$fetch['Market_ID'].'</td></tr>';
+                }
+            }
+    
     
     ?>
 

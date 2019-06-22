@@ -53,10 +53,10 @@
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-          <li class="active"><a href="#intro">Dashboard</a></li>
-             <li class="active"><a href="#intro">Sales Details</a></li>
+          <li class="active"><a href="dashboard.php">Dashboard</a></li>
+             <li class="active"><a href="salesinfo.php">Sales Details</a></li>
              <li class="active"><a href="#intro">Performance Report</a></li>
-             <li class="active"><a href="#intro">Tour Plan</a></li>
+             <li class="active"><a href="tourplan.php">Tour Plan</a></li>
            <li class="active"><a href="#intro">Username</a></li>
           <li class="active"><a href="#intro"> Logout</a></li>
         </ul>
