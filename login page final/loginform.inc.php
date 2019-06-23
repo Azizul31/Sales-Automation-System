@@ -1,5 +1,4 @@
 <?php
-
     if (isset($_POST['username']) && isset($_POST['password'])) {
         $username = $_POST['username'];
         $password = $_POST['password'];
@@ -24,7 +23,6 @@
                     ."AND `Password` = '".$password_hash."'";
                     if($query_run = mysqli_query($link, $query)) {
                         $query_num_rows = mysqli_num_rows($query_run);
-
                         if ($query_num_rows == 1) {
                             $fetch = mysqli_fetch_assoc($query_run);
                             $user_id = $fetch['ID'];
@@ -37,7 +35,6 @@
                             ."AND `Password` = '".$password_hash."'";
                             if($query_run = mysqli_query($link, $query)) {
                                 $query_num_rows = mysqli_num_rows($query_run);
-
                                 if ($query_num_rows == 1) {
                                     $fetch = mysqli_fetch_assoc($query_run);
                                     $user_id = $fetch['ID'];
@@ -50,7 +47,6 @@
                                     ."AND `Password` = '".$password_hash."'";
                                     if($query_run = mysqli_query($link, $query)) {
                                         $query_num_rows = mysqli_num_rows($query_run);
-
                                         if ($query_num_rows == 1) {
                                             $fetch = mysqli_fetch_assoc($query_run);
                                             $user_id = $fetch['ID'];
@@ -74,10 +70,9 @@
     }
     
 include("head.php");
-
 ?>
+<title>SRBIL</title>
 <style>
-
     p.invalid
     {
         font-weight: 700;
