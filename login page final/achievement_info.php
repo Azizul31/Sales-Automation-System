@@ -1,3 +1,6 @@
+<?php
+    include("head2.php");
+?>
 <title>Achievement Summary</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -98,7 +101,6 @@ h1.spacing
     <tr>
     </tr>
     <?php
-        include 'core.inc.php';
         include 'connect.inc.php';
         
         $id = $_SESSION ['user_id'];
@@ -152,7 +154,7 @@ h1.spacing
             }
         }
         
-        include("head.php");
+        //include("head2.php");
         
     ?>
 

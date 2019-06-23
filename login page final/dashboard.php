@@ -1,6 +1,5 @@
 <?php
-//include("head.php");
-include 'core.inc.php';
+include("head2.php");
 include 'connect.inc.php';
 
 $id = $_SESSION ['user_id'];
@@ -156,7 +155,7 @@ $result = mysqli_query ($link, "SELECT `Item 1` FROM `sales details` "
   
 $bill_no = mysqli_num_rows($result);
 
-include("head.php");
+//include("head2.php");
 ?>
 
 
@@ -195,7 +194,7 @@ include("head.php");
                 },
                 data: [{
                         type: "column",
-                        yValueFormatString: "#,##0.## taka",
+                        yValueFormatString: "#,##0.## tk",
                         dataPoints: <?php echo json_encode($dataPoints, JSON_NUMERIC_CHECK); ?>
                     }]
             });
@@ -291,7 +290,7 @@ include("head.php");
                                         <div class="row no-gutters align-items-center">
                                             <div class="col mr-2">
                                                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">TARGET ACHIEVEMENT (MONTHLY)</div>
-                                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $achievement; ?>%</div>
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo number_format($achievement, 2); ?>%</div>
                                             </div>
 
                                         </div>

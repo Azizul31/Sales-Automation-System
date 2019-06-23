@@ -1,8 +1,7 @@
 <?php
 ob_start();
-include 'core.inc.php';
+include("head3.php");
 include 'connect.inc.php';
-include("head.php");
 
 echo $_SESSION['user_id'];
 if (!loggedin()) header("location: index.php");
@@ -90,7 +89,7 @@ date_default_timezone_set('Asia/Dhaka');
 $month = date("F");
 
 $date = date("d");
-$year = date("y");
+$year = date("Y");
 $jd = cal_to_jd(CAL_GREGORIAN,date("m"),date("d"),date("Y"));
 
 $day = jddayofweek($jd, 1);

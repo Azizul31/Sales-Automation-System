@@ -35,10 +35,10 @@
 <!--===============================================================================================-->
 </head>
 <style>
+    
     </style>
 <body>
 <?php
-
 ?>
 <!--==========================
     Footer
@@ -56,11 +56,11 @@
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Terms of service</a></li>
-              <li><a href="#">Privacy policy</a></li>
+              <li><a href="loginform.inc.php">Home</a></li>
+              <li><a href="About_us.php">About us</a></li>
+              <li><a href="Services.php">Services</a></li>
+              <li><a href="Contact_us.php">Contact Us</a></li>
+              <li><a href="Why_us.php">Why Us</a></li>
             </ul>
           </div>
 

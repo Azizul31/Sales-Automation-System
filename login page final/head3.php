@@ -37,6 +37,7 @@
 </head>
 <body>
 <?php
+   include 'core.inc.php';
 ?>
 <!--==========================
   Header
@@ -52,10 +53,9 @@
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-          <li><a href="loginform.inc.php">Home</a></li>
-          <li><a href="About_us.php">About Us</a></li>
-          <li><a href="Services.php">Services</a></li>
-          <li><a href="Contact_us.php">Contact Us</a></li>
+            
+             <li class="active"><a><?php echo $_SESSION ['user_id']; ?></a></li>
+             <li class="active"><a href="logout.php"> Logout</a></li>
         </ul>
       </nav><!-- .main-nav -->
       
