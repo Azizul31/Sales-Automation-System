@@ -1,9 +1,10 @@
 <?php
 ob_start();
-include("head3.php");
-include 'connect.inc.php';
 
-echo $_SESSION['user_id'];
+include 'core.inc.php';
+include 'connect.inc.php';
+include 'head3.php';
+
 if (!loggedin()) header("location: index.php");
 ?>
 

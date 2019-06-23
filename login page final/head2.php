@@ -37,7 +37,7 @@
 </head>
 <body>
 <?php
-   include 'core.inc.php';
+   //include 'core.inc.php';
 ?>
 <!--==========================
   Header

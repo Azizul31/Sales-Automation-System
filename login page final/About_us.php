@@ -1,6 +1,14 @@
 <?php
-include("head.php");
+include 'core.inc.php';
+if (loggedin()) {
+    if (strcmp("SM", $_SESSION['user_id']) == -4) {
+        include("head3.php");
+    }
+    elseif (!empty ($_SESSION['user_id'])) include("head2.php");
+    else include 'head.php';
+}
 ?>
+
 <title>About Us</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>

@@ -13,9 +13,8 @@
                 $query_num_rows = mysqli_num_rows($query_run);
                 
                 if ($query_num_rows == 1) {
-                    echo 'OK';
                     $fetch = mysqli_fetch_assoc($query_run);
-                    echo $user_id = $fetch['ID'];
+                    $user_id = $fetch['ID'];
                     $_SESSION['user_id'] = $user_id;
                     header('Location: index.php');
                 }
@@ -27,9 +26,8 @@
                         $query_num_rows = mysqli_num_rows($query_run);
 
                         if ($query_num_rows == 1) {
-                            echo 'OK';
                             $fetch = mysqli_fetch_assoc($query_run);
-                            echo $user_id = $fetch['ID'];
+                            $user_id = $fetch['ID'];
                             $_SESSION['user_id'] = $user_id;
                             header('Location: index.php');
                         }
@@ -41,9 +39,8 @@
                                 $query_num_rows = mysqli_num_rows($query_run);
 
                                 if ($query_num_rows == 1) {
-                                    echo 'OK';
                                     $fetch = mysqli_fetch_assoc($query_run);
-                                    echo $user_id = $fetch['ID'];
+                                    $user_id = $fetch['ID'];
                                     $_SESSION['user_id'] = $user_id;
                                     header('Location: index.php');
                                 }
@@ -55,9 +52,8 @@
                                         $query_num_rows = mysqli_num_rows($query_run);
 
                                         if ($query_num_rows == 1) {
-                                            echo 'OK';
                                             $fetch = mysqli_fetch_assoc($query_run);
-                                            echo $user_id = $fetch['ID'];
+                                            $user_id = $fetch['ID'];
                                             $_SESSION['user_id'] = $user_id;
                                             header('Location: index.php');
                                         }
@@ -86,8 +82,12 @@ include("head.php");
 		<div class="container-login100">
                     <form class="login100-form validate-form" action="<?php echo $current_file; ?>" method="POST">
 					<span class="login100-form-title">
-                    <h1>Samah Razor Blades Ind. Limited</h1>   <br>
-						Member Login
+                                            <h1>Samah Razor Blades Ind. Limited</h1>   <br>
+                                            Member Login <br>
+                                            <?php if (!empty($username) && !empty($password)) {
+                                                if ($query_num_rows == 0) {
+                                                echo 'Invalid username/password combination.';}} ?>
+                                                
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">

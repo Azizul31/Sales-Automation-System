@@ -37,7 +37,7 @@
 </head>
 <body>
 <?php
-   include 'core.inc.php';
+   //include 'core.inc.php';
 ?>
 <!--==========================
   Header
@@ -53,9 +53,9 @@
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-            
-             <li class="active"><a><?php echo $_SESSION ['user_id']; ?></a></li>
-             <li class="active"><a href="logout.php"> Logout</a></li>
+            <li class="active"><a href="index.php">Data Entry</a></li>
+            <li class="active"><a><?php echo $_SESSION ['user_id']; ?></a></li>
+            <li class="active"><a href="logout.php"> Logout</a></li>
         </ul>
       </nav><!-- .main-nav -->
       

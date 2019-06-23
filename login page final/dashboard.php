@@ -1,6 +1,7 @@
 <?php
-include("head2.php");
+include 'core.inc.php';
 include 'connect.inc.php';
+include 'head2.php';
 
 $id = $_SESSION ['user_id'];
 date_default_timezone_set('Asia/Dhaka');
@@ -23,7 +24,11 @@ function day_wise_sale($link, $id, $dif) {
             . "WHERE `Area Code` IN (SELECT `Area Code` FROM `distributors_areas` "
             . "WHERE `Regional_Manager` IN (SELECT `Name` FROM `regional managers` "
             . "WHERE `ID` = '" . $id . "') OR `Territory_Manager` IN (SELECT `Name` "
-        . "FROM `territory managers` WHERE `ID` = '".$id."')))") or die("error");
+            . "FROM `territory managers` WHERE `ID` = '".$id."')))") or die("error");
+    if (strcmp("EX", $_SESSION['user_id']) == -3) {
+        $result = mysqli_query($link, "SELECT SUM(`Total sale`) AS sale FROM `sales details` "
+            . "WHERE `Year` = '" . $year . "' AND `Month` = '" . $month . "' AND `Date` = '" . $date . "'") or die ("error");
+    }
     $fetch = mysqli_fetch_assoc($result);
     $day1 = $fetch ['sale'];
     return $day1;
@@ -113,6 +118,10 @@ $result = mysqli_query($link, "SELECT SUM(`Total sale`) AS sale FROM `sales deta
         . "WHERE `Regional_Manager` IN (SELECT `Name` FROM `regional managers` "
         . "WHERE `ID` = '" . $id . "') OR `Territory_Manager` IN (SELECT `Name` "
         . "FROM `territory managers` WHERE `ID` = '".$id."')))") or die("error");
+if (strcmp("EX", $_SESSION['user_id']) == -3) {
+        $result = mysqli_query($link, "SELECT SUM(`Total sale`) AS sale FROM `sales details` "
+            . "WHERE `Year` = '" . $year . "' AND `Month` = '" . $month . "'") or die ("error");
+}
 
 $fetch = mysqli_fetch_assoc($result);
 $total_tk = $fetch ['sale'];
@@ -123,6 +132,9 @@ $result = mysqli_query($link, "SELECT SUM(`Target`) AS target FROM `salesmen` "
         . "WHERE `Regional_Manager` IN (SELECT `Name` FROM `regional managers` "
         . "WHERE `ID` = '".$id."') OR `Territory_Manager` IN (SELECT `Name` "
         . "FROM `territory managers` WHERE `ID` = '".$id."'))") or die("error");
+if (strcmp("EX", $_SESSION['user_id']) == -3) {
+        $result = mysqli_query($link, "SELECT SUM(`Target`) AS target FROM `salesmen`") or die ("error");
+}
 
 $fetch = mysqli_fetch_assoc($result);
 $total_target = $fetch['target'];
@@ -137,6 +149,11 @@ $result = mysqli_query ($link, "SELECT SUM(`Item 1`) AS item1, SUM(`Item 1`) AS 
         ."WHERE `Regional_Manager` IN (SELECT `Name` FROM `regional managers` "
         ."WHERE `ID` = '".$id."') OR `Territory_Manager` IN (SELECT `Name` "
         . "FROM `territory managers` WHERE `ID` = '".$id."')))") or die ("error");
+if (strcmp("EX", $_SESSION['user_id']) == -3) {
+        $result = mysqli_query($link, "SELECT SUM(`Item 1`) AS item1, SUM(`Item 1`) AS item2, "
+        ."SUM(`Item 1`) AS item3 FROM `sales details` "
+        ."WHERE `Year` = '".$year."' AND `Month` = '".$month."'") or die ("error");
+}
   
 $fetch = mysqli_fetch_assoc($result);
 $item1 = $fetch ['item1'];
@@ -152,6 +169,10 @@ $result = mysqli_query ($link, "SELECT `Item 1` FROM `sales details` "
         ."WHERE `Regional_Manager` IN (SELECT `Name` FROM `regional managers` "
         ."WHERE `ID` = '".$id."') OR `Territory_Manager` IN (SELECT `Name` "
         . "FROM `territory managers` WHERE `ID` = '".$id."')))") or die ("error");
+if (strcmp("EX", $_SESSION['user_id']) == -3) {
+        $result = mysqli_query($link, "SELECT `Item 1` FROM `sales details` "
+        ."WHERE `Year` = '".$year."' AND `Month` = '".$month."' AND `Date` = '".$date."' ") or die ("error");
+}
   
 $bill_no = mysqli_num_rows($result);
 
