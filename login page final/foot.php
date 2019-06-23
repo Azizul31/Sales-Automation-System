@@ -56,7 +56,7 @@
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><a href="loginform.inc.php">Home</a></li>
+              <li><a href="index.php">Home</a></li>
               <li><a href="About_us.php">About us</a></li>
               <li><a href="Services.php">Services</a></li>
               <li><a href="Contact_us.php">Contact Us</a></li>

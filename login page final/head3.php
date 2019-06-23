@@ -37,7 +37,7 @@
 </head>
 <body>
 <?php
-   include 'core.inc.php';
+   //include 'core.inc.php';
 ?>
 <!--==========================
   Header
@@ -48,14 +48,14 @@
       <div class="logo float-left">
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
-        <a href="#intro" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a>
+        <a href="index.php" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a>
       </div>
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-            
-             <li class="active"><a><?php echo $_SESSION ['user_id']; ?></a></li>
-             <li class="active"><a href="logout.php"> Logout</a></li>
+            <li class="active"><a href="index.php">Data Entry</a></li>
+            <li class="active"><a><?php echo $_SESSION ['user_id']; ?></a></li>
+            <li class="active"><a href="logout.php"> Logout</a></li>
         </ul>
       </nav><!-- .main-nav -->
       

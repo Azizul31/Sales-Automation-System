@@ -1,4 +1,5 @@
 <?php
+    include 'core.inc.php';
     include("head2.php");
 ?>
 <title>Achievement Summary</title>
@@ -129,6 +130,10 @@ h1.spacing
                 ."WHERE `Regional_Manager` IN (SELECT `Name` FROM `regional managers` "
                 ."WHERE `ID` = '".$id."') OR `Territory_Manager` IN (SELECT `Name` "
                 ."FROM `territory managers` WHERE `ID` = '".$id."'))") or die("error");
+        
+        if (mysqli_num_rows($result) == 0) {
+            $result = mysqli_query($link, "SELECT `ID` FROM `salesmen`");
+        }
         
         $resultset=array();
         while($row=mysqli_fetch_assoc($result))

@@ -1,4 +1,5 @@
 <?php
+include 'core.inc.php';
 include("head2.php");
 ?>
 <title>Sales Details</title>
