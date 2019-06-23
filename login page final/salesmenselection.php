@@ -1,5 +1,5 @@
 <?php
-include("head2.php");
+include("head.php");
 ?>
 <title>Dataentry Form</title>
 <style>

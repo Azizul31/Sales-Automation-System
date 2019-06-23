@@ -37,7 +37,7 @@
 </head>
 <body>
 <?php
-
+   include 'core.inc.php';
 ?>
 <!--==========================
   Header
@@ -53,12 +53,12 @@
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-          <li class="active"><a href="dashboard.php">Dashboard</a></li>
+            <li class="active"><a href="dashboard.php">Dashboard</a></li>
              <li class="active"><a href="salesinfo.php">Sales Details</a></li>
-             <li class="active"><a href="#intro">Performance Report</a></li>
+             <li class="active"><a href="achievement_info.php">Performance Report</a></li>
              <li class="active"><a href="tourplan.php">Tour Plan</a></li>
-           <li class="active"><a href="#intro">Username</a></li>
-          <li class="active"><a href="#intro"> Logout</a></li>
+             <li class="active"><a><?php echo $_SESSION ['user_id']; ?></a></li>
+             <li class="active"><a href="logout.php"> Logout</a></li>
         </ul>
       </nav><!-- .main-nav -->
       

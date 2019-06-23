@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2019 at 04:47 PM
+-- Generation Time: Jun 23, 2019 at 08:21 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -189,7 +189,38 @@ INSERT INTO `sales details` (`Bill no.`, `Date`, `Month`, `Year`, `Day`, `Shop I
 (31, '11', 'February', '2019', 'Monday', 'KAPBAZ_1', 10, 20, 0, 300, 800, 0, 1100),
 (32, '11', 'February', '2019', 'Monday', 'KAPBAZ_2', 10, 2, 3, 300, 80, 135, 515),
 (33, '11', 'February', '2019', 'Monday', 'KAPMAIN_1', 5, 2, 3, 150, 80, 135, 365),
-(34, '13', 'February', '2019', 'Tuesday', 'SITABAZ_1', 6, 2, 6, 180, 80, 270, 530);
+(34, '13', 'February', '2019', 'Tuesday', 'SITABAZ_1', 6, 2, 6, 180, 80, 270, 530),
+(35, '22', 'June', '2019', 'Saturday', 'CTGKOT1', 2, 2, 2, 60, 80, 90, 230),
+(36, '22', 'June', '2019', 'Saturday', 'CTGREAZ_2', 1, 2, 3, 30, 80, 135, 245),
+(37, '22', 'June', '2019', 'Saturday', 'SITABAZ_1', 1, 5, 3, 30, 200, 135, 365),
+(38, '22', 'June', '2019', 'Saturday', 'HATBAZ_1', 1, 2, 3, 30, 80, 135, 245),
+(39, '22', 'June', '2019', 'Saturday', 'HATBAZ_2', 1, 2, 6, 30, 80, 270, 380),
+(40, '22', 'June', '2019', 'Saturday', 'FENIBAZ_1', 2, 2, 3, 60, 80, 135, 275),
+(41, '22', 'June', '2019', 'Saturday', 'FENIBAZ_2', 4, 1, 3, 120, 40, 135, 295),
+(42, '22', 'June', '2019', 'Saturday', 'FULBAZ_1', 1, 2, 3, 30, 80, 135, 245),
+(43, '22', 'June', '2019', 'Saturday', 'FULBAZ_2', 1, 5, 3, 30, 200, 135, 365),
+(44, '22', 'June', '2019', 'Saturday', 'BAN1_1', 1, 2, 3, 30, 80, 135, 245),
+(45, '22', 'June', '2019', 'Saturday', 'BAN2_1', 1, 2, 3, 30, 80, 135, 245),
+(46, '22', 'June', '2019', 'Saturday', 'GPBAZ_1', 1, 2, 3, 30, 80, 135, 245),
+(47, '22', 'June', '2019', 'Saturday', 'GPBAZ_2', 2, 3, 4, 60, 120, 180, 360),
+(48, '23', 'June', '2019', 'Sunday', 'HATMAIN_1', 15, 2, 3, 450, 80, 135, 765),
+(49, '23', 'June', '2019', 'Sunday', 'KAPBAZ_1', 10, 20, 0, 300, 800, 0, 1000),
+(50, '23', 'June', '2019', 'Sunday', 'KAPBAZ_2', 10, 2, 3, 300, 80, 135, 575),
+(51, '23', 'June', '2019', 'Sunday', 'KAPMAIN_1', 5, 2, 3, 150, 80, 135, 565),
+(52, '23', 'June', '2019', 'Sunday', 'SITABAZ_1', 6, 2, 6, 180, 80, 270, 430),
+(53, '23', 'June', '2019', 'Sunday', 'CTGKOT1', 2, 2, 2, 60, 80, 90, 260),
+(54, '23', 'June', '2019', 'Sunday', 'CTGREAZ_2', 1, 2, 3, 30, 80, 135, 255),
+(55, '23', 'June', '2019', 'Sunday', 'SITABAZ_1', 1, 5, 3, 30, 200, 135, 385),
+(56, '23', 'June', '2019', 'Sunday', 'HATBAZ_1', 1, 2, 3, 30, 80, 135, 275),
+(57, '23', 'June', '2019', 'Sunday', 'HATBAZ_2', 1, 2, 6, 30, 80, 270, 390),
+(58, '23', 'June', '2019', 'Sunday', 'FENIBAZ_1', 2, 2, 3, 60, 80, 135, 265),
+(59, '23', 'June', '2019', 'Sunday', 'FENIBAZ_2', 4, 1, 3, 120, 40, 135, 265),
+(60, '23', 'June', '2019', 'Sunday', 'FULBAZ_1', 1, 2, 3, 30, 80, 135, 255),
+(61, '23', 'June', '2019', 'Sunday', 'FULBAZ_2', 1, 5, 3, 30, 200, 135, 355),
+(62, '23', 'June', '2019', 'Sunday', 'BAN1_1', 1, 2, 3, 30, 80, 135, 235),
+(63, '23', 'June', '2019', 'Sunday', 'BAN2_1', 1, 2, 3, 30, 80, 135, 245),
+(64, '23', 'June', '2019', 'Sunday', 'GPBAZ_1', 1, 2, 3, 30, 80, 135, 245),
+(65, '23', 'June', '2019', 'Sunday', 'GPBAZ_2', 2, 3, 4, 60, 120, 180, 350);
 
 -- --------------------------------------------------------
 
@@ -201,26 +232,27 @@ CREATE TABLE `salesmen` (
   `Name` varchar(30) NOT NULL,
   `ID` varchar(15) NOT NULL,
   `Password` varchar(32) NOT NULL,
-  `Area Code` varchar(15) NOT NULL
+  `Area Code` varchar(15) NOT NULL,
+  `Target` int(11) NOT NULL DEFAULT '5000'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `salesmen`
 --
 
-INSERT INTO `salesmen` (`Name`, `ID`, `Password`, `Area Code`) VALUES
-('Shahriar Ahmed', 'SM_001', '21d1ce58f85b11a469ac9016ed2cdda1', 'CTG_1'),
-('Ratul Roy', 'SM_002', '64c08ca6b03ea1e208c7c5bc136a1005', 'CTG_2'),
-('Towhidur Alam', 'SM_003', '7fc0f76161f970f34946ceda55d1f0e7', 'CTG_3'),
-('Labib Wahid', 'SM_004', '3eb75163c1643c33b3f6d4f24fd80030', 'FENI_1'),
-('Souharda Biswas', 'SM_005', 'aeee3683f994e22130d378341c7a687c', 'FENI_2'),
-('Yasir Mahbub', 'SM_006', '0eff6ab7e20aa809eaa7cc8ba86c31a0', 'FENI_3'),
-('Mahbub Alam', 'SM_007', 'f6ed80ffcb960b7f31ff62da898bbfc0', 'DHK_1'),
-('Abdullah Mamun', 'SM_008', '1cbc455c31531a6b16435a0ef32faaf4', 'DHK_2'),
-('Iqbal Hossain', 'SM_009', 'b160f903928e387b5f017038d5246db8', 'DHK_3'),
-('Kamrul Islam', 'SM_010', '7f69ba1ad3a61c1cd04d16e7bba988d8', 'GP_1'),
-('Ashef Habib', 'SM_011', '3305fe548fe60087aa1042e98e16fb4e', 'GP_2'),
-('Mahidul Zihan', 'SM_012', 'b8dc54a29df71401c8ee566371859da5', 'GP_3');
+INSERT INTO `salesmen` (`Name`, `ID`, `Password`, `Area Code`, `Target`) VALUES
+('Shahriar Ahmed', 'SM_001', '21d1ce58f85b11a469ac9016ed2cdda1', 'CTG_1', 5000),
+('Ratul Roy', 'SM_002', '64c08ca6b03ea1e208c7c5bc136a1005', 'CTG_2', 7000),
+('Towhidur Alam', 'SM_003', '7fc0f76161f970f34946ceda55d1f0e7', 'CTG_3', 5000),
+('Labib Wahid', 'SM_004', '3eb75163c1643c33b3f6d4f24fd80030', 'FENI_1', 4000),
+('Souharda Biswas', 'SM_005', 'aeee3683f994e22130d378341c7a687c', 'FENI_2', 5000),
+('Yasir Mahbub', 'SM_006', '0eff6ab7e20aa809eaa7cc8ba86c31a0', 'FENI_3', 4000),
+('Mahbub Alam', 'SM_007', 'f6ed80ffcb960b7f31ff62da898bbfc0', 'DHK_1', 5000),
+('Abdullah Mamun', 'SM_008', '1cbc455c31531a6b16435a0ef32faaf4', 'DHK_2', 6000),
+('Iqbal Hossain', 'SM_009', 'b160f903928e387b5f017038d5246db8', 'DHK_3', 5000),
+('Kamrul Islam', 'SM_010', '7f69ba1ad3a61c1cd04d16e7bba988d8', 'GP_1', 6000),
+('Ashef Habib', 'SM_011', '3305fe548fe60087aa1042e98e16fb4e', 'GP_2', 5000),
+('Mahidul Zihan', 'SM_012', 'b8dc54a29df71401c8ee566371859da5', 'GP_3', 4000);
 
 -- --------------------------------------------------------
 
@@ -232,6 +264,7 @@ CREATE TABLE `salesmen_tour_programme` (
   `Salesman_ID` varchar(15) NOT NULL,
   `Date` varchar(2) NOT NULL,
   `Month` varchar(2) NOT NULL,
+  `Year` varchar(4) NOT NULL,
   `Day` varchar(10) NOT NULL,
   `Market_ID` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -240,19 +273,19 @@ CREATE TABLE `salesmen_tour_programme` (
 -- Dumping data for table `salesmen_tour_programme`
 --
 
-INSERT INTO `salesmen_tour_programme` (`Salesman_ID`, `Date`, `Month`, `Day`, `Market_ID`) VALUES
-('SM_001', '2', '3', '2019', 'CTGREAZ'),
-('SM_002', '2', '3', '2019', 'SITABAZ'),
-('SM_003', '2', '3', '2019', 'HATBAZ'),
-('SM_004', '2', '3', '2019', 'FENIBAZ'),
-('SM_005', '2', '3', '2019', 'FULMAIN'),
-('SM_006', '2', '3', '2019', 'SONMAIN'),
-('SM_007', '2', '3', '2019', 'BAN1'),
-('SM_008', '2', '3', '2019', 'DHN1'),
-('SM_009', '2', '3', '2019', 'UTT1'),
-('SM_010', '2', '3', '2019', 'GPBAZ'),
-('SM_011', '2', '3', '2019', 'KAPMAIN'),
-('SM_012', '2', '3', '2019', 'SREBAZ');
+INSERT INTO `salesmen_tour_programme` (`Salesman_ID`, `Date`, `Month`, `Year`, `Day`, `Market_ID`) VALUES
+('SM_001', '23', '6', '2019', 'Sunday', 'CTGREAZ'),
+('SM_002', '22', '6', '2019', 'Saturday', 'SITABAZ'),
+('SM_003', '23', '6', '2019', 'Sunday', 'HATBAZ'),
+('SM_004', '22', '6', '2019', 'Saturday', 'FENIBAZ'),
+('SM_005', '23', '6', '2019', 'Sunday', 'FULMAIN'),
+('SM_006', '23', '6', '2019', 'Sunday', 'SONMAIN'),
+('SM_007', '22', '6', '2019', 'Saturday', 'BAN1'),
+('SM_008', '23', '6', '2019', 'Sunday', 'DHN1'),
+('SM_009', '23', '6', '2019', 'Sunday', 'UTT1'),
+('SM_010', '22', '6', '2019', 'Saturday', 'GPBAZ'),
+('SM_011', '23', '6', '2019', 'Sunday', 'KAPMAIN'),
+('SM_012', '23', '6', '2019', 'Sunday', 'SREBAZ');
 
 -- --------------------------------------------------------
 
@@ -399,7 +432,7 @@ ALTER TABLE `territory managers`
 -- AUTO_INCREMENT for table `sales details`
 --
 ALTER TABLE `sales details`
-  MODIFY `Bill no.` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `Bill no.` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
