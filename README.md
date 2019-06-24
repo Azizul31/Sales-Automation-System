@@ -1,5 +1,7 @@
 Developed by:Ashikur Rahman(CUET,CSE'14),Azizul Hakim Chowdhury(CUET,CSE'14),Amit Paul(CUET,CSE'14)
 
+Password: Employee passwords are stored as md5 hashes in the database. User password is the first name of that user.
+
 i.)Theme & Templete Credit(1):
 
 Thanks for downloading this theme!
