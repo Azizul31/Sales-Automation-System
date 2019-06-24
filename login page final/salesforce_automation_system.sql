@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 23, 2019 at 10:25 AM
+-- Generation Time: Jun 23, 2019 at 08:17 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -220,7 +220,23 @@ INSERT INTO `sales details` (`Bill no.`, `Date`, `Month`, `Year`, `Day`, `Shop I
 (62, '23', 'June', '2019', 'Sunday', 'BAN1_1', 1, 2, 3, 30, 80, 135, 235),
 (63, '23', 'June', '2019', 'Sunday', 'BAN2_1', 1, 2, 3, 30, 80, 135, 245),
 (64, '23', 'June', '2019', 'Sunday', 'GPBAZ_1', 1, 2, 3, 30, 80, 135, 245),
-(65, '23', 'June', '2019', 'Sunday', 'GPBAZ_2', 2, 3, 4, 60, 120, 180, 350);
+(65, '23', 'June', '2019', 'Sunday', 'GPBAZ_2', 2, 3, 4, 60, 120, 180, 350),
+(66, '24', 'June', '2019', 'Monday', 'BAN1_1', 1, 2, 3, 30, 80, 135, 245),
+(67, '24', 'June', '2019', 'Monday', 'BAN1_2', 10, 5, 10, 300, 200, 450, 950),
+(68, '24', 'June', '2019', 'Monday', 'BAN2_1', 3, 5, 7, 90, 200, 315, 605),
+(69, '24', 'June', '2019', 'Monday', 'CTGKOT_1', 5, 7, 8, 150, 280, 360, 790),
+(70, '24', 'June', '2019', 'Monday', 'CTGREAZ_1', 5, 6, 11, 150, 240, 495, 885),
+(71, '24', 'June', '2019', 'Monday', 'CTGREAZ_2', 4, 2, 15, 120, 80, 675, 875),
+(72, '24', 'June', '2019', 'Monday', 'DHN1_1', 15, 10, 5, 450, 400, 225, 1075),
+(73, '24', 'June', '2019', 'Monday', 'DHN1_2', 4, 3, 12, 120, 120, 540, 780),
+(74, '24', 'June', '2019', 'Monday', 'DHN2_1', 7, 10, 15, 210, 400, 675, 1285),
+(75, '24', 'June', '2019', 'Monday', 'FENIBAZ_1', 10, 7, 13, 300, 280, 585, 1165),
+(76, '24', 'June', '2019', 'Monday', 'FENIBAZ_2', 6, 6, 7, 180, 240, 315, 735),
+(77, '24', 'June', '2019', 'Monday', 'FENIBAZ_3', 7, 7, 10, 210, 280, 450, 940),
+(78, '24', 'June', '2019', 'Monday', 'FULBAZ_1', 5, 6, 11, 150, 240, 495, 885),
+(79, '24', 'June', '2019', 'Monday', 'FULBAZ_2', 10, 15, 10, 300, 600, 450, 1350),
+(80, '24', 'June', '2019', 'Monday', 'FULMAIN_1', 12, 2, 3, 360, 80, 135, 575),
+(81, '24', 'June', '2019', 'Monday', 'GPBAZ_1', 15, 21, 3, 450, 840, 135, 1425);
 
 -- --------------------------------------------------------
 
@@ -432,7 +448,7 @@ ALTER TABLE `territory managers`
 -- AUTO_INCREMENT for table `sales details`
 --
 ALTER TABLE `sales details`
-  MODIFY `Bill no.` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `Bill no.` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

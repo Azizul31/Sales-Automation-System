@@ -4,9 +4,9 @@ if (loggedin()) {
     if (strcmp("SM", $_SESSION['user_id']) == -4) {
         include("head3.php");
     }
-    elseif (!empty ($_SESSION['user_id'])) include("head2.php");
-    else include 'head.php';
+    else include("head2.php");
 }
+else include 'head.php';
 ?>
 <title>Services</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
