@@ -1,5 +1,6 @@
 <?php
-include("head.php");
+include 'core.inc.php';
+include("head2.php");
 ?>
 <title>Sales Details</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">

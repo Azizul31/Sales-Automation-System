@@ -8,7 +8,7 @@ if (loggedin()) {
 }
 else include 'head.php';
 ?>
-<title>Contact Us</title>
+<title>Services</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 .col-25 {
@@ -95,7 +95,7 @@ h1.spacing
 				<div class="login100-form validate-form">
 					<div class="login100-form-title">
 					<span>
-                    <h1 class="spacing">Contact Us!</h1>   <br>
+                    <h1 class="spacing">Our Services!</h1>   <br>
 					</span>
                         </div>
             </div>
@@ -106,18 +106,17 @@ h1.spacing
       
     <body>
          
-<p class="spacing">Corporate Office<br>
-ABC house (9th Floor) 8, kemal Ataturk Ave.<br>
-Banani C/A, Dhaka-1213, Bangladesh.<br>
-
-Phone: +88-02-9821994, 8825846-8<br>
-Fax     : +88-02-9821998<br>
-<br><br>
-        </p>
-<p class="spacing">Factory<br>
-247/248, Tejgaon I/A<br>
-Dhaka-1208, Bangladesh<br>
-Phone: +88-02-8878683
+<p class="spacing">1.Double Edge Blade<br>
+    2.Half blade<br>
+    3.Adoro MAX<br>
+    4.Adoro Swift<br>
+    5.Velvet<br>
+    6.Comfort<br>
+    7.Sharp blue<br>
+    8.Adoro XL<br>
+    9.Adoro Shaver<br>
+    10.Shaving Foam<br>
+    11.Ballpen
         </p>
         </div>
   

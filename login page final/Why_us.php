@@ -8,7 +8,7 @@ if (loggedin()) {
 }
 else include 'head.php';
 ?>
-<title>Contact Us</title>
+<title>Why Us</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 .col-25 {
@@ -38,13 +38,13 @@ h1.spacing
     }
     p.spacing
     {
-        text-align:left;
+        text-align:center;
         padding-left: 10px;
         font-family: sans-serif;
         font-size: 20px;
         color: #333333;
         line-height: 1.2;
-        text-align: center;
+        text-align: left;
         display: block;
         padding-bottom: 70px;
         padding-top: 30px;
@@ -95,7 +95,7 @@ h1.spacing
 				<div class="login100-form validate-form">
 					<div class="login100-form-title">
 					<span>
-                    <h1 class="spacing">Contact Us!</h1>   <br>
+                    <h1 class="spacing">Why Us!</h1>   <br>
 					</span>
                         </div>
             </div>
@@ -106,19 +106,16 @@ h1.spacing
       
     <body>
          
-<p class="spacing">Corporate Office<br>
-ABC house (9th Floor) 8, kemal Ataturk Ave.<br>
-Banani C/A, Dhaka-1213, Bangladesh.<br>
+<p class="spacing">Samah Razor Blades Industries Limited (SRBIL) was established in 1962 to manufacture Safety Razor Blades and is a pioneer industry of its kind in South Asia. SRBIL is gradually expanding capacity to meet its growing international demand due to its superior product quality and service. SRBIL is the market leader in Carbon Steel, Stainless Steel, Disposable Blade and system segment.<br><br>
 
-Phone: +88-02-9821994, 8825846-8<br>
-Fax     : +88-02-9821998<br>
-<br><br>
-        </p>
-<p class="spacing">Factory<br>
-247/248, Tejgaon I/A<br>
-Dhaka-1208, Bangladesh<br>
-Phone: +88-02-8878683
-        </p>
+SRBIL Blade manufacturing unit is located in Dhaka, the capital city of Bangladesh and presently employs about 700 persons working in three shifts.<br><br>
+
+Since the beginning SRBIL has always been pro-active and thus innovative. The journey began with manufacture of Carbon Steel Blades only in 1962, however, with time and experience ( knowhow and training from the UK) the company went into manufacturing Stainless Steel Blades since 1993 and progressively has acquired machinery’s to manufacture Disposable Razors, Pencil Knifes, Snap-off cutters and developed a modern plastic manufacturing unit.<br><br>
+
+SRBIL is ISO 9001:2000 approved company and adheres to requirements as specified by Bangladesh Standard Testing Institute (BSTI). SRBIL owns its own successful portfolio of local and international brands including SHARP,Champion,7am,Adoro, and manufacture as OEM for international clients and famous brands in Europe, Middle East and America.<br><br>
+
+ </p>
+
         </div>
   
 </body>
