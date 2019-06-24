@@ -2,6 +2,7 @@
 include 'core.inc.php';
 include("head2.php");
 ?>
+
 <title>Tour Details</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
