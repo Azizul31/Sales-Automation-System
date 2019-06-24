@@ -4,7 +4,7 @@ if (loggedin()) {
     if (strcmp("SM", $_SESSION['user_id']) == -4) {
         include("head3.php");
     }
-    else include("head2.php");
+   else include("head2.php");
 }
 else include 'head.php';
 ?>
@@ -107,16 +107,16 @@ h1.spacing
     <body>
          
 <p class="spacing">1.Double Edge Blade<br>
-    2.Half blade<br>
-    3.Adoro MAX<br>
-    4.Adoro Swift<br>
-    5.Velvet<br>
-    6.Comfort<br>
-    7.Sharp blue<br>
-    8.Adoro XL<br>
-    9.Adoro Shaver<br>
-    10.Shaving Foam<br>
-    11.Ballpen
+    2.Rupom Half blade<br>
+    3.Rupom MAX<br>
+    4.Rupom Swift<br>
+    5.Rupom Velvet<br>
+    6.Rupom Comfort<br>
+    7.Rupom blue<br>
+    8.Rupom XL<br>
+    9.Rupom Shaver<br>
+    10.Rupom Shaving Foam<br>
+    11.Rupom Ballpen
         </p>
         </div>
   

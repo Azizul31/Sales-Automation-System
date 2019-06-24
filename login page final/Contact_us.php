@@ -4,7 +4,7 @@ if (loggedin()) {
     if (strcmp("SM", $_SESSION['user_id']) == -4) {
         include("head3.php");
     }
-    else include("head2.php");
+   else include("head2.php");
 }
 else include 'head.php';
 ?>
@@ -107,17 +107,17 @@ h1.spacing
     <body>
          
 <p class="spacing">Corporate Office<br>
-ABC house (9th Floor) 8, kemal Ataturk Ave.<br>
+Rupom house (19th Floor) 8, Kamal Ataturk Ave.<br>
 Banani C/A, Dhaka-1213, Bangladesh.<br>
 
-Phone: +88-02-9821994, 8825846-8<br>
-Fax     : +88-02-9821998<br>
+Phone: +88-02-0000000,8000000-8<br>
+Fax     : +88-02-0000000<br>
 <br><br>
         </p>
 <p class="spacing">Factory<br>
-247/248, Tejgaon I/A<br>
-Dhaka-1208, Bangladesh<br>
-Phone: +88-02-8878683
+1247/1248, Tejgaon I/A<br>
+Dhaka-1230, Bangladesh<br>
+Phone: +88-02-0000000
         </p>
         </div>
   

@@ -71,7 +71,7 @@
     
 include("head.php");
 ?>
-<title>SRBIL</title>
+<title>RRBIL</title>
 <style>
     p.invalid
     {
@@ -84,7 +84,7 @@ include("head.php");
 		<div class="container-login100">
                     <form class="login100-form validate-form" action="<?php echo $current_file; ?>" method="POST">
 					<span class="login100-form-title">
-                                            <h1>Samah Razor Blades Ind. Limited</h1> <br>
+                                            <h1>Rupom Razor Blades Ind. Limited</h1> <br>
                                             Member Login <br>
                                        <p class="invalid">     <?php if (!empty($username) && !empty($password)) {
                                                 if ($query_num_rows == 0) {

@@ -107,9 +107,9 @@ h1.spacing
       
     <body>
          
-<p class="spacing">Samah Razor Blades Industries Limited (SRBIL) was established in 1962 to manufacture Safety Razor Blades and is a pioneer industry of its kind in South Asia. SRBIL is gradually expanding capacity to meet its growing international demand due to its superior product quality and service. SRBIL is the market leader in Carbon Steel, Stainless Steel, Disposable Blade and system segment.
+<p class="spacing">Rupom Razor Blades Industries Limited (RRBIL) was established in 1995 to manufacture pure Razor Blades and is a pioneer industry of its kind in whole Asia. RRBIL is gradually expanding capacity to meet its growing international demand due to its superior product quality and services. RRBIL is the market leader in Carbon Steel, Stainless Steel and system segment.
         </p>
-<p class="spacing">SRBIL Blade manufacturing unit is located in Dhaka, the capital city of Bangladesh and presently employs about 700 persons working in three shifts.
+<p class="spacing">RRBIL Blade manufacturing unit is located in Dhaka, the capital city of Bangladesh and presently employs about 1000 peeople working in different shifts.
         </p>
         </div>
   
