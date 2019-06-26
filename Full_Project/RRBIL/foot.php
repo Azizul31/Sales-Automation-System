@@ -49,8 +49,8 @@
         <div class="row">
 
           <div class="col-lg-4 col-md-6 footer-info">
-            <h3>SRBIL</h3>
-            <p>Samah Razor Blades Industries Limited (SRBIL) was established in 1962 to manufacture Safety Razor Blades and is a pioneer industry of its kind in South Asia. SRBIL is gradually expanding capacity to meet its growing international demand due to its superior product quality and service. SRBIL is the market leader in Carbon Steel, Stainless Steel, Disposable Blade and system segment.more about us</p>
+            <h3>RRBIL</h3>
+            <p>Rupom Razor Blades Industries Limited (RRBIL) was established in 1995 to manufacture Safety Razor Blades and is a pioneer industry of its kind in whole Asia. RRBIL is gradually expanding capacity to meet its growing international demand due to its superior product quality and service. RRBIL is the market leader in Carbon Steel, Stainless Steel, Disposable Blade and system segment.more about us</p>
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
@@ -69,14 +69,14 @@
             <p>
               We have the answer for you at your fingertips.<br>
               Simply dial following number or send us mail and get the information you want.<br>
-              <strong>Phone:</strong> +88-02-9821994<br>
-              <strong>Email:</strong> info@srbil.com<br><br>
+              <strong>Phone:</strong> +88-02-000000<br>
+              <strong>Email:</strong> abcd@rrbil.com<br><br>
             </p>
 
             <div class="social-links">
-              <a href="https://twitter.com/samahrazorblade" class="twitter"><i class="fa fa-twitter"></i></a>
-              <a href="https://www.facebook.com/samahrazor" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="https://plus.google.com/u/0/104837034130007748544" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="https://twitter.com/" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.facebook.com/" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="https://plus.google.com/" class="google-plus"><i class="fa fa-google-plus"></i></a>
               
             </div>
 
@@ -84,7 +84,7 @@
 
           <div class="col-lg-3 col-md-6 footer-newsletter">
             <h4>Why Us</h4>
-            <p>Samah Razor Blades Ind. Ltd. products are a perfect combination of comfort, elegance, performance and style. The craftsmanship behind each Samah Razor Blades blade is unsurpassed. When it comes to quality, we are using world best steel and our own toughest critics.</p>
+            <p>Rupom Razor Blades Ind. Ltd. products are a perfect combination of comfort, elegance, performance and style. The craftsmanship behind each Rupom Razor Blades blade is unsurpassed. When it comes to quality, we are using world best steel and our own toughest critics.</p>
           </div>
 
         </div>
