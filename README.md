@@ -1,6 +1,7 @@
 Developed by:Ashikur Rahman(CUET,CSE'14),Azizul Hakim Chowdhury(CUET,CSE'14),Amit Paul(CUET,CSE'14)
 
-Password: Employee passwords are stored as md5 hashes in the database. User password is the first name of that user.
+Password: Employee passwords are stored as md5 hashes in the database. User password is the first name of that user as mentioned in the database.
+To see the graphs and other calculative sections in the managers'/executives' dashboard and other pages working as expected, recent sales data are needed, as those sections give an overview of recent sales information.
 
 i.)Theme & Templete Credit(1):
 
