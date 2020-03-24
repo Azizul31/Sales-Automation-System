@@ -1,4 +1,4 @@
-Developed by:Ashikur Rahman(CUET,CSE'14),Azizul Hakim Chowdhury(CUET,CSE'14),Amit Paul(CUET,CSE'14)
+Developed by: Ashikur Rahman(CUET, CSE'14), Azizul Hakim Chowdhury(CUET, CSE'14), Amit Paul(CUET, CSE'14).
 
 Password: Employee passwords are stored as md5 hashes in the database. User password is the first name of that user as mentioned in the database.
 Live link: http://rrbil.cf/
